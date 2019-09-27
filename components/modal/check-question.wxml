@@ -1,0 +1,19 @@
+<view class="check-question-shadowbox" wx:if="{{show}}">
+  <view class="bo">
+    <view class="top">
+      <image src="/public/images/lesson/ask-yellow.png"></image>
+    </view>
+    <view class="bottom">
+      <view>
+        <text class="font36" style="color:#ff7600;">勾选</text>
+        <text class="font36">你要提问的问题</text>
+      </view>
+      <view class="vv">
+        <checkQuestionBtn modal="true"></checkQuestionBtn>
+        <!-- <text class="pkicon pkicon-lesson-right"></text>
+        <image src="/public/images/wdata/wdata-ask-yellow.png"></image> -->
+      </view>
+    </view>
+    <view class="btn" bindtap="close">我知道了</view>
+  </view>
+</view>

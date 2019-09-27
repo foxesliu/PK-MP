@@ -1,0 +1,16 @@
+@import '../answer/photo.wxss';
+
+.commit-txt-input {
+  height: 104rpx;
+  line-height: 104rpx;
+  padding-right: 10rpx;
+  font-size: 28rpx;
+}
+
+.commit-txt-txt {
+  min-height: 104rpx;
+  line-height: 40rpx;
+  padding: 15rpx 15rpx 10rpx 0;
+  display: flex;
+  align-items: center;
+}

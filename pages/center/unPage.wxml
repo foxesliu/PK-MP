@@ -1,0 +1,5 @@
+<view class="development-image">
+  <image src="/public/images/my/my-nodata.png"></image>
+  <view class="txt">披星戴月开发中，7月见</view>
+</view>
+<image class="logo-image" src="/public/images/my/my-logo-gray.png"></image>

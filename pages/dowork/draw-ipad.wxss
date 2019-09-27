@@ -1,0 +1,270 @@
+page {
+  background: #e9e9e9;
+}
+
+canvas {
+  position: fixed;
+  z-index: 3;
+}
+
+.canvas-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.temp-image {
+  z-index: 3;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 154rpx;
+}
+
+.footer .btn {
+  width: 46rpx;
+  height: 46rpx;
+  background-color: #fff;
+  box-shadow: 0px 5rpx 14rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius: 45rpx;
+  color: #979797;
+  font-size: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .btn.cancel {
+  position: fixed;
+  right: 28rpx;
+  top: 25rpx;
+}
+
+.footer .btn.submit {
+  position: fixed;
+  right: 28rpx;
+  top: 90rpx;
+}
+
+.footer .mbtn {
+  position: fixed;
+  right: 0;
+  /* transform: translateX(-50%); */
+  top: 160rpx;
+  /* bottom: 700rpx; */
+  height: 76rpx;
+  width: 83rpx;
+  background: #fff200;
+  border-top-left-radius: 38rpx;
+  border-bottom-left-radius: 38rpx;
+  transition: all 0.2s;
+}
+
+.mbtn.audio-btn {
+  top: 260rpx;
+  width: 113rpx;
+  right: -30rpx;
+  transition: all 0.2s;
+}
+
+.mbtn .red-bg {
+  width: 60rpx;
+  height: 60rpx;
+  background-image: linear-gradient(0deg, #ff6800 0%, #ff8d00 100%);
+  box-shadow: 0px 3rpx 0px 0px #e04b00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.second .pkicon-wdata-sound {
+  color: #ff8739;
+  font-size: 18rpx;
+}
+
+.second text {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 18rpx;
+}
+
+.mbtn .pkicon-wdraw-bottom-arrow {
+  color: #ffa255;
+  font-size: 35rpx;
+  text-align: center;
+  position: relative;
+  top: -7rpx;
+}
+
+.mbtn .white-bg {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #fff;
+  box-shadow: 4rpx 0px 4rpx 0px #ffbd00;
+  border-radius: 60rpx;
+  margin: 8rpx;
+}
+
+.audio-play-btn {
+  font-size: 25rpx;
+  color: #fff200;
+}
+
+.draw-type-box {
+  width: 350rpx;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  z-index: 5;
+  transition: all 0.2s;
+}
+
+.draw-type-box .item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200rpx;
+}
+
+.draw-type-box .item:nth-child(4) text {
+  position: absolute;
+  content: "";
+  left: 200rpx;
+  top: 105rpx;
+  display: block;
+  width: 15rpx;
+  height: 15rpx;
+  background: red;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.draw-type-box .item image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.draw-type-box .top {
+  margin: 90rpx 0 0 30rpx;
+  text-align: center;
+}
+
+.draw-type-box .top .image image {
+  height: 123rpx;
+  width: 123rpx;
+}
+
+.pensize-box .size-box {
+  margin: 50rpx 0 0 70rpx;
+}
+
+.pensize-box .size-box .ite {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  float: left;
+  margin: 0 40rpx 80rpx 0;
+}
+
+.size-box .ite view {
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pensize-box .size-box .ite.active {
+  box-shadow: 0 0 10rpx #dadada;
+}
+
+.pensize-box .size-box .ite.active view {
+  background: #ffd200;
+}
+
+.pensize-box .size-box view image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.color-box {
+  margin: 30rpx 0 0 35rpx;
+}
+
+.color-box .i {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  border-radius: 50%;
+  padding: 4rpx;
+  margin: 0 15rpx 15rpx 0;
+}
+
+.color-box .i.active {
+  border: 1px solid #dadada;
+  box-shadow: 0 0 10rpx #dadada;
+}
+
+.color-box .i view {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  border: 1px solid #dadada;
+}
+
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: black;
+  opacity: 0.6;
+}
+
+.footer .mbtn image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.footer .btn.submit {
+  color: #60a800;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .btn.submit .pkicon {
+  margin-top: 5rpx;
+}
+
+.footer .quit {
+  width: 100rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: red;
+}

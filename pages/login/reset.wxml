@@ -1,0 +1,86 @@
+<view class='main-container' wx:if="{{!isIPad}}">
+  <view class='container'>
+    <view class='title-box'>
+      <image class='top-img' src="/public/images/login/reset.png"></image>
+    </view>
+    <view class='phone-box-out mt-40'>
+      <view class='phone-box flex-box {{phoneEr ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-phone"></text>
+        <input class='phone' type='number' placeholder='输入手机号码' maxlength="11" data-index="1" bindinput="bindKeyInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='errorTip' hidden="{{!phoneEr}}">请您输入正确的手机号码</view>
+    </view>
+    <view class='verify-box-out mt-30'>
+      <view class='verify-box flex-box '>
+        <view class='verify-box-in flex-box {{verifyEr ? "activeBor1" : ""}}'>
+          <text class="pkicon pkicon-login-getcode"></text>
+          <input class="verify-txt" type='number' placeholder='输入验证码' data-index="2" bindfocus="focus" bindblur="no_focus" maxlength="4" bindinput="smsCode"></input>
+        </view>
+        <view class='verify-btn' hidden='{{isGetCodde}}' data-time>{{time}}</view>
+        <view class='activeBg' hidden='{{!isGetCodde}}' bindtap='getCode' data-time>{{time}}</view>
+      </view>
+      <view class='errorTip' hidden="{{!verifyEr}}">验证码错误</view>
+    </view>
+    <view class='verify-box-out mt-30'>
+      <view class='verify-box flex-box {{passWordEr ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-password"></text>
+        <input class="verify-txt" placeholder='输入新密码' password data-index="2" bindfocus="focus" bindblur="passWordNew" maxlength="18"></input>
+      </view>
+      <view class='errorTip' hidden="{{!passWordEr}}">新密码不能低于6位哦</view>
+    </view>
+    <view class='next-box'>
+      <button class='next' bindtap='getBackPw'>确定</button>
+    </view>
+    <toastComponent id="toastComponent22" stat="right" txt="重置密码成功将返回登录页面"></toastComponent>
+    <toastComponent id="toastComponent33" stat="wrong" txt="重置密码失败请重试"></toastComponent>
+    <!-- <view class='resetPw'>
+      <text>重置密码</text>
+    </view> -->
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/bottom-bg.png'></image>
+  </view>
+</view>
+<view class='ipad-container' wx:if="{{isIPad}}">
+  <view class='container'>
+    <view class='ipad-title-box'>
+      <image class='top-img' src="/public/images/login/reset.png"></image>
+    </view>
+    <view class='ipad-phone-box-out'>
+      <view class='ipad-phone-box flex-box {{phoneEr ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-phone"></text>
+        <input class='phone' type='number' placeholder='输入手机号码' maxlength="11" data-index="1" bindinput="bindKeyInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='ipad-errorTip' hidden="{{!phoneEr}}">请您输入正确的手机号码</view>
+    </view>
+    <view class='ipad-phone-box-out mt8 '>
+      <view class='ipad-phone-box flex-box '>
+        <view class='ipad-verify-box-in flex-box {{verifyEr ? "activeBor1" : ""}}'>
+          <text class="pkicon pkicon-login-getcode"></text>
+          <input class="phone" type='number' placeholder='输入验证码' data-index="2" bindfocus="focus" bindblur="no_focus" maxlength="4" bindinput="smsCode"></input>
+        </view>
+        <view class='verify-btn' hidden='{{isGetCodde}}' data-time>{{time}}</view>
+        <view class='ipad-activeBg' hidden='{{!isGetCodde}}' bindtap='getCode' data-time>{{time}}</view>
+      </view>
+      <view class='ipad-errorTip' hidden="{{!verifyEr}}">验证码错误</view>
+    </view>
+    <view class='ipad-phone-box-out mt8'>
+      <view class='ipad-phone-box flex-box {{passWordEr ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-password"></text>
+        <input class="phone" placeholder='输入新密码' password data-index="2" bindfocus="focus" bindblur="passWordNew" maxlength="18"></input>
+      </view>
+      <view class='ipad-errorTip' hidden="{{!passWordEr}}">新密码不能低于6位哦</view>
+    </view>
+    <view class='ipad-next-box'>
+      <button class='next' bindtap='getBackPw'>确定</button>
+    </view>
+    <toastComponent id="toastComponent22" stat="right" txt="重置密码成功将返回登录页面"></toastComponent>
+    <toastComponent id="toastComponent33" stat="wrong" txt="重置密码失败请重试"></toastComponent>
+    <!-- <view class='resetPw'>
+      <text>重置密码</text>
+    </view> -->
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/ipad-bottom-bg.png'></image>
+  </view>
+</view>

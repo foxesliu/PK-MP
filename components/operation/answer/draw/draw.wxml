@@ -1,0 +1,31 @@
+<view class="box" wx:if="{{!answerValue}}">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-ask"></view>
+  </view>
+  <view class="middle">请画图作答</view>
+  <view class="right">
+    <view class="right-box" bindtap="toDraw">
+      <image class="imi" src="/public/images/wdata/draw.png"></image>
+    </view>
+  </view>
+  <view class="bg">
+    <image src="/public/images/ask/bg.png"></image>
+  </view>
+</view>
+
+<view style="height:auto" class="box answer-component-video answer-component-photo" wx:if="{{answerValue}}">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-ask"></view>
+  </view>
+  <view class="mid">
+    <image mode="widthFix" bindtap="showPic" data-src="{{answerValue}}" src="{{answerValue}}"></image>
+    <view class="pull-right record-again" wx:if="{{cannotDo!='true'}}" bindtap="gotoDrawPage">
+      <text class="pkicon pkicon-wdraw-cancel"></text>
+      <text class="color-white font26 ml-10">重新作答</text>
+    </view>
+  </view>
+</view>
+
+<modalLoadingComponent id="modalLoadingComponent" txt="图片上传中"></modalLoadingComponent>
+
+<toDrawComponent bindgiveupcallback="gotoDrawPage" id="toDrawComponent"></toDrawComponent>

@@ -1,0 +1,43 @@
+<view class='main-container'>
+  <view class='container'>
+    <view class='title-box'>
+      <image class='top-img' src="/public/images/login/step2.png"></image>
+    </view>
+    <view class='phone-box-out mt-40'>
+      <view class='input-text  flex-box {{cNameEr ? "activeBor" : ""}}'>
+        <!-- <text class="pkicon pkicon-login-phone"></text> -->
+        <input class='phone' placeholder='输入孩子的中文名字' maxlength="11" data-index="1" bindinput="bindcNameInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='errorTip' hidden="{{!cNameEr}}">请您输入正确的中文名字</view>
+    </view>
+    <view class='phone-box-out mt-30'>
+      <view class='input-text flex-box  {{gradeEr ? "activeBor" : ""}}'>
+        <picker bindchange="bindPickerChange" value="{{grade}}" range="{{gradeList}}" style='flex:1'>
+          <view class="picker">
+            <text hidden='{{isGrade}}' >请选择孩子的英语学习阶段</text>{{gradeList[grade]}}
+          </view>
+        </picker>
+        <text class="pkicon pkicon-login-sanjiao selectionIcon"></text>
+      </view>
+      <view>
+      </view>
+      <view class='errorTip' hidden="{{!gradeEr}}">请您选择学习阶段</view>
+    </view>
+    <view class='phone-box-out mt-30'>
+      <view class='input-text  flex-box {{eNameEr ? "activeBor" : ""}}'>
+        <!-- <text class="pkicon pkicon-login-phone"></text> -->
+        <input class='phone'  placeholder='孩子的英文名字（选填）' maxlength="11" bindinput="bindeNameInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='errorTip' hidden="{{!eNameEr}}">请您输入正确的英文名字</view>
+    </view>
+    <view class='next-box'>
+      <button class='next' bindtap='complete'>完成</button>
+    </view>
+    <!-- <view class='resetPw'>
+      <text>重置密码</text>
+    </view> -->
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/bottom-bg.png'></image>
+  </view>
+</view>

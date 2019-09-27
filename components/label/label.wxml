@@ -1,0 +1,7 @@
+<view class="label-box" bindtap="gotoPage">
+  <image class="label-image" src="{{pic}}"></image>
+  <view class="bot">
+    <text class="circle {{item.annotationStat==1?'readed':''}}"></text>
+    <text class="txt">批注</text>
+  </view>
+</view>

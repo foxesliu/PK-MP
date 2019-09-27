@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cupComponent": "/components/cup/cup"
+  }
+}

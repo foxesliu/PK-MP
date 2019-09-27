@@ -1,0 +1,15 @@
+<view class="video-box answer-component-video" style="box-shadow:0px 6rpx 0px 0px #77d10b" wx:if="{{url}}">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-ask" wx:if="{{!replyIcon}}"></view>
+    <view class="pkicon pkicon-ask-reply" style="font-size:55rpx" wx:if="{{replyIcon}}"></view>
+  </view>
+  <view class="mid">
+    <view class="video-btn" bindtap="playVideo">
+      <view class="btn">
+        <image src="/public/images/wdata/video-btn.png"></image>
+        <text class="color-white">播放</text>
+      </view>
+      <image class="bg" src="/public/images/wdata/video-default.png"></image>
+    </view>
+  </view>
+</view>

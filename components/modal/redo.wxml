@@ -1,0 +1,4 @@
+<view class="reset-box" wx:if="{{show}}">
+  <image src="/public/images/wdata/wdata-plaint.png"></image>
+  <view class="text">有进行中的操作</view>
+</view>

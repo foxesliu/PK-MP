@@ -1,0 +1,6 @@
+<view class="check-question-btn" bindtap="click">
+  <view class="{{active?'active':''}}">
+    <text class="pkicon pkicon-wdraw-right"></text>
+  </view>
+  <image src="/public/images/wdata/wdata-ask-yellow.png"></image>
+</view>

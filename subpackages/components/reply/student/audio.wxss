@@ -1,0 +1,109 @@
+@import "/public/style/pkicon.wxss";
+@import "/public/style/sanfeng.wxss";
+
+.reply-student-audio-box {
+  width: 100%;
+  min-height: 155rpx;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reply-student-audio-box .image {
+  margin-left: 30rpx;
+}
+
+.reply-student-audio-box .titleimg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: relative;
+  top: 20rpx;
+}
+
+.reply-student-audio-box .boxes .top {
+  width: 400rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.reply-student-audio-box .box {
+  width: 400rpx;
+  min-height: 116rpx;
+  height: auto;
+  background: #91e224;
+  border-radius: 10rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.reply-student-audio-box .box.before:before {
+  display: block;
+  content: "";
+  position: absolute;
+  right: -18rpx;
+  top: 20rpx;
+  width: 0;
+  height: 0;
+  border-top: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+  border-left: 20rpx solid #91e224;
+}
+
+.reply-student-audio-box .box .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reply-student-audio-box .box .right .pkicon {
+  position: relative;
+  top: 2rpx;
+}
+
+.reply-student-audio-box .btn {
+  width: 217rpx;
+  height: 70rpx;
+  background-image: linear-gradient(0deg, #ceff7c 0%, #f8fff0 100%);
+  box-shadow: 0px 6rpx 0px 0px #5ca900;
+  border-radius: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reply-student-audio-box .color-548e05 {
+  color: #548e05;
+}
+
+.reply-student-audio-box .color-ff8739 {
+  color: #ff8739;
+}
+
+.txt-box {
+  padding: 15rpx !important;
+}
+
+.video-boxx, .photo-box {
+  padding: 0 !important;
+  border-radius: 10rpx;
+}
+
+.video-boxx image {
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+
+.video-boxx video {
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+
+.photo-box image {
+  border-radius: 10rpx;
+  min-height: 116rpx;
+  width: 100%;
+}

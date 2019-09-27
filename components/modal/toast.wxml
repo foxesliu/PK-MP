@@ -1,0 +1,6 @@
+<view class="reset-box" wx:if="{{show}}">
+  <image wx:if="{{!stat}}" src="/public/images/wdraw/wdraw-reset.png"></image>
+  <image wx:if="{{stat=='right'}}" style="width:155rpx;height:108rpx" src="/public/images/wdraw/wdraw-right.png"></image>
+  <image wx:if="{{stat=='wrong'}}" style="width:109rpx;height:109rpx" src="/public/images/wdraw/wdraw-wrong.png"></image>
+  <view class="text" style="{{stat=='wrong'?'width:250rpx':''}}">{{txt}}</view>
+</view>

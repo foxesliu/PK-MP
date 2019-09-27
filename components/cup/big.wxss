@@ -1,0 +1,15 @@
+.cup {
+  width: 56rpx;
+  height: 52rpx;
+  margin-right: 20rpx;
+}
+
+.bigcup-box {
+  width: 280rpx;
+  height: 82rpx;
+  background-color: #fff;
+  box-shadow: 0px 2rpx 13rpx 0px rgba(221, 221, 221, 0.5);
+  border-top-left-radius: 41rpx;
+  border-bottom-left-radius: 41rpx;
+  padding: 20rpx 0 0 45rpx;
+}

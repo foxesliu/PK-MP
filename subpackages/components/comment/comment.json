@@ -1,0 +1,25 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cupComponent": "/subpackages/components/cup",
+    "leftComponent": "/subpackages/components/left",
+    "audioAnswerComponent": "/subpackages/components/dowork-answer/audio",
+    "drawAnswerComponent": "/subpackages/components/dowork-answer/draw",
+    "photoAnswerComponent": "/subpackages/components/dowork-answer/photo",
+    "textAnswerComponent": "/subpackages/components/dowork-answer/text",
+    "videoAnswerComponent": "/subpackages/components/dowork-answer/video",
+    "audioQuestionComponent": "/subpackages/components/dowork-question/audio",
+    "photoQuestionComponent": "/subpackages/components/dowork-question/photo",
+    "textQuestionComponent": "/subpackages/components/dowork-question/text",
+    "videoQuestionComponent": "/subpackages/components/dowork-question/video",
+    "labelComponent": "/subpackages/components/label",
+    "replyStudentAudioComponent": "/subpackages/components/reply/student/audio",
+    "replyStudentPhotoComponent": "/subpackages/components/reply/student/photo",
+    "replyStudentTxtComponent": "/subpackages/components/reply/student/txt",
+    "replyStudentVideoComponent": "/subpackages/components/reply/student/video",
+    "replyTeacherAudioComponent": "/subpackages/components/reply/teacher/audio",
+    "replyTeacherPhotoComponent": "/subpackages/components/reply/teacher/photo",
+    "replyTeacherTxtComponent": "/subpackages/components/reply/teacher/txt",
+    "replyTeacherVideoComponent": "/subpackages/components/reply/teacher/video"
+  }
+}

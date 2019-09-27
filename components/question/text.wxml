@@ -1,0 +1,6 @@
+<view class="box">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-question"></view>
+  </view>
+  <view class="middle">{{txt}}</view>
+</view>

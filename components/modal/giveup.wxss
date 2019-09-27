@@ -1,0 +1,94 @@
+@import "/public/style/sanfeng.wxss";
+@import "/public/style/pkicon.wxss";
+
+.giveup-shadowbox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.giveup-shadowbox .bo {
+  width: 540rpx;
+  height: 500rpx;
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.giveup-shadowbox .bo .top {
+  width: 540rpx;
+  height: 88rpx;
+  background-color: #fde214;
+  box-shadow: 0px 2rpx 28rpx 0px rgba(0, 0, 0, 0.16);
+  border-radius: 8rpx;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.giveup-shadowbox .bo .top .icon {
+  width: 105rpx;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 2rpx 4rpx 0px #ffbd00;
+  position: relative;
+  top: -32rpx;
+}
+
+.giveup-shadowbox .bo .top .icon .pkicon3,
+.giveup-shadowbox .bo .top .icon .pkicon {
+  font-size: 40rpx;
+  color: #ff6100;
+  line-height: 105rpx;
+}
+
+.giveup-shadowbox .bo .bottom {
+  height: 260rpx;
+  width: 540rpx;
+  background: white;
+  border-radius: 8rpx;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: linear-gradient(#f0f0f0 0%, white 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.giveup-shadowbox .bo .bottom .vv {
+  margin-top: 29rpx;
+}
+
+.giveup-shadowbox .btn-box {
+  display: flex;
+}
+
+.giveup-shadowbox .btn-box view {
+  width: 230rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+  text-align: center;
+  color: white;
+  font-size: 32rpx;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, #8cd100 0%, #509f00 100%);
+  box-shadow: 0px 4rpx 0px 0px #4f8701;
+  border-radius: 22rpx;
+  margin: 40rpx 10rpx 0 10rpx;
+}
+
+.giveup-shadowbox .btn-box view.yes {
+  background-image: linear-gradient(180deg, #ff8f40 0%, #ff4500 100%);
+}

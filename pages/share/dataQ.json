@@ -1,0 +1,21 @@
+{
+  "navigationBarBackgroundColor": "#fde214",
+  "usingComponents": {
+    "operationAnswerAudioComponent": "/components/operation/answer/audio/audio",
+    "operationAnswerPhotoComponent": "/components/operation/answer/photo/photo",
+    "operationAnswerTxtComponent": "/components/operation/answer/txt/txt",
+    "operationAnswerVideoComponent": "/components/operation/answer/video/video",
+    "operationQuestionAudioComponent": "/components/operation/question/audio/audio",
+    "operationQuestionPhotoComponent": "/components/operation/question/photo/photo",
+    "operationQuestionTxtComponent": "/components/operation/question/txt/txt",
+    "operationQuestionVideoComponent": "/components/operation/question/video/video",
+    "modalLoadingComponent": "/components/modal/loading",
+    "modalRedoComponent": "/components/modal/redo",
+    "resultComponent": "/components/result/result",
+    "checkQuesionComponent": "/components/modal/check-question",
+    "checkQuestionBtnComponent": "/components/small/check-question-btn",
+    "labelComponent": "/components/label/label",
+    "committedComponent": "/components/small/committed",
+    "bigcupComponent": "/components/cup/big"
+  }
+}

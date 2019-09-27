@@ -1,0 +1,24 @@
+<!--pages/center/rules.wxml-->
+<view class='images-box'>
+  <image src='/public/images/my/my-liht.png'></image>
+  <image src='/public/images/my/my-cup-active.png'></image>
+</view>
+<view class='top-box'>
+  <view class='title title1'>奖杯的来源</view>
+  <view class='txt'>Proud Kids为了鼓励孩子学习更加有动力，模仿Classin也设置了奖杯的奖励，意在鼓励孩子积极的完成日常的预习和作业，Proud Kids深知只有让孩子做好预习和作业才能学好英语，真正完成学习的闭环。</view>
+  <view class='txt'>在此基础上未来奖杯还可以兑换实体礼物，程序员哥哥们正在加班努力给大家实现更多有意思学习产品，希望各位家长和小朋友们喜欢</view>
+</view>
+<view class='m-box'>
+  <view class='title'>奖杯获取规则</view>
+  <view class='txt-box'>
+    <view class='txt txt1'>
+      <image src='/public/images/my/my-cup-active.png'></image>
+      <view class='txt-info'><text style='color:#cb6f02'>完成每节的预习或者作业</text>，老师会根据作答情况进行奖杯的奖励。</view>
+    </view>
+    <view class='txt txt2'>
+      <image src='/public/images/my/my-cup-active.png'></image>
+      <view class='txt-info'>每个预习或者作业的的分享页面<text style='color:#cb6f02'>点赞的前10个人都会默认奖励一个奖杯</text>，超过10个人不再奖励奖杯。</view>
+    </view>
+  </view>
+</view>
+<view class='btm-box' bindtap='goBack'>了解</view>

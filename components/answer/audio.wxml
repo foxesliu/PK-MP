@@ -1,0 +1,79 @@
+<view class="audio-container">
+  <view class="box">
+    <view class="left">
+      <view class="pkicon pkicon-wdata-w-ask" wx:if="{{!isCommit}}"></view>
+      <view class="pkicon pkicon-ask-reply" style="font-size:55rpx" wx:if="{{isCommit}}"></view>
+    </view>
+
+    <view class="middle" wx:if="{{recordStep==1}}">
+      <text class="text ml-10">请上传录音</text>
+    </view>
+    <view class="middle" wx:if="{{recordStep==2}}">
+      <text class="text ml-10">{{timerFormat}}</text>
+      <!-- <image class="record-gif" src="/public/images/wdata/wdata-audio-recording.gif"></image> -->
+      <view class="record-gif">
+        <recordingAnimationComponent></recordingAnimationComponent>
+      </view>
+    </view>
+    <view class="middle" wx:if="{{recordStep==3}}">
+      <view class="pull-left score" wx:if="{{!isCommit}}">
+      <!-- wx:if="{{score}}" -->
+        <text class="font52">{{score}}</text>
+        <text class="font22 ml-5">分</text>
+      </view>
+      <view class="mt-5 pull-left">
+        <view class="pull-left pkicon pkicon-wdata-sound ml-10"></view>
+        <view class="pull-left second ml-5" wx:if="{{duration}}">{{durationShow}}''</view>
+      </view>
+      <view class="pull-right record-again" wx:if="{{!resourceUrl&&!isCommit}}" bindtap="clickRecordAgain">
+        <text class="pkicon pkicon-wdraw-cancel"></text>
+        <text class="color-white font26 ml-10">重新录音</text>
+      </view>
+    </view>
+    <view class="middle step4" wx:if="{{recordStep==4}}">
+      <view class="mt-5 pull-left view">
+        <view class="pull-left pkicon pkicon-wdata-sound ml-10"></view>
+        <view class="pull-left second ml-10">{{playingShowSecond}}''</view>
+      </view>
+      <view class="progress" style="left:-{{playingLeft}}%"></view>
+    </view>
+
+    <view class="right" bindtap="record">
+      <view class="right-box" wx:if="{{recordStep==1}}">
+        <view class="pkicon pkicon-wdata-record">
+          <text class="path1"></text>
+        </view>
+      </view>
+      <view class="right-box-recording" wx:if="{{recordStep==2}}">
+        <view></view>
+      </view>
+      <view class="right-box" wx:if="{{recordStep==3}}">
+        <view class="pkicon pkicon-wdata-icon-right">
+          <text class="path1"></text>
+        </view>
+      </view>
+      <view class="right-box" wx:if="{{recordStep==4}}">
+        <view class="pkicon pkicon-wdraw-pause">
+          <text class="path1"></text>
+        </view>
+      </view>
+    </view>
+    <view class="bg">
+      <image src="/public/images/ask/bg.png"></image>
+    </view>
+  </view>
+
+  <view class="shape" wx:if="{{!isCommit&&!resourceUrl&&!isAsk}}">
+    <view class="t">
+      <text>请跟读以下内容</text>
+      <view class="pkicon pkicon-wdata-right-arrow"></view>
+    </view>
+    <view class="c">{{readTxt}}</view>
+  </view>
+</view>
+
+<modalRedoComponent id="modalRedoComponent"></modalRedoComponent>
+
+<view wx:if="{{loadingIsShow}}">
+  <modalLoadingComponent txt="录音上传中"></modalLoadingComponent>
+</view>

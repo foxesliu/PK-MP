@@ -1,0 +1,37 @@
+<!--subPackages/pages/index.wxml-->
+<view class='bg'>
+  <image src='../images/home/bg.png' class='bg-image'></image>
+  <view class='absolute top-box'>
+    <view class='logo'>
+      <image src='../images/home/logo.png' class='logo'></image>
+    </view>
+    <view class='text-box'>
+      <text class='sptext'>5-12</text>
+      <text>岁在线固定外教小班课</text>
+    </view>
+    <view class='title relative'>
+      
+      <image src='../images/home/toptxt.png' class='toptxt'></image>
+      <image src='../images/home/btmtxt.png' class="btmtxt {{abc ? 'activel':'' }}" ></image>
+      <image src='../images/home/60.png' class="txt-img {{abc1 ? 'activet':'' }}"></image>
+    </view>
+  </view>
+  <view class='absolute btm-box'>
+    <view class=' relative' style='height:390rpx;'>
+      <image src='../images/home/bgb.png' class='bottom-bg'></image>
+      <view class='absolute group1'>
+        <view class=' relative group1-box'>
+          <image src='../images/home/13.png' class='mt1'></image>
+          <image src='../images/home/mt.png' class='mt'></image>
+        </view>
+      </view>
+      <image src='../images/home/person.png' class="person {{abc1 ? 'activep':'' }}"></image>
+      <image src='../images/home/book1.png' class='book1'></image>
+      <image src='../images/home/book2.png' class='book2'></image>
+      <image src='../images/home/book3.png' class='book3'></image>
+      <image src='../images/home/paper.png' class='paper'></image>
+      <image src='../images/home/bt.png' class='bt' bindtap="goToPage"></image>
+      <!-- <image src='../images/home/down.png' class='down'></image> -->
+    </view>
+  </view>
+</view>

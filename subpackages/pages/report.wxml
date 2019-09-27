@@ -1,0 +1,131 @@
+<view class="container">
+  <leftComponent id="leftComponent" bindchangecurrent="changecurrent"></leftComponent>
+  <swiper vertical="true" style="height:100%;" bindchange="swiperChange" current="{{current}}">
+
+    <swiper-item class="swiper-item">
+      <view class="main-box relative">
+        <image src="../images/topic-bg.png" class="bg absolute"></image>
+        <image src="../images/topic-1.png" class="shcoolimg absolute"></image>
+        <view class="relative top-box">
+          <image src="../images/topic-top.png" class="bgTop absolute"></image>
+          <image src="../images/right2.png" class="right2 absolute"></image>
+          <image src="../images/chengji.png" class="chengji absolute"></image>
+          <view class="tip1 absolute" wx:if="{{mode==0}}">预习环节</view>
+          <view class="tip1 absolute" wx:if="{{mode==1}}">作业环节</view>
+        </view>
+        <view class="absolute paper-box">
+          <view class="relative full">
+            <image src="../images/paperbg1.png" class="paperbg1 absolute"></image>
+            <view class="lessonName absolute">{{lessonName || ''}}</view>
+            <view class="absolute txt1">
+              <view class="relative txt-box">
+                <image src='../images/right.png' class="right"></image>
+                <view class="txts">
+                  <view class="t1">作答时间</view>
+                  <view class="t2">Response time</view>
+                  <view class="t3">
+                    <text class="t3-bg">{{hour}}</text>:
+                    <text class="t3-bg">{{min}}</text>:
+                    <text class="t3-bg">{{second}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="absolute txt1 txt2">
+              <view class="relative txt-box">
+                <image src='../images/right.png' class="right "></image>
+                <view class="txts">
+                  <view class="t1">正确率</view>
+                  <view class="t2">Correctness rate</view>
+                  <view class="t3">
+                    <text class="t3-bg">{{percent}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="absolute txt1 txt3">
+              <view class="relative txt-box">
+                <image src='../images/right.png' class="right "></image>
+                <view class="txts">
+                  <view class="t1">本节奖杯数</view>
+                  <view class="t2">Number of trophies</view>
+                  <view class="t3">
+                    <text class="t3-bg">{{trophies}}<text style="font-size:26rpx;line-height:0">个</text></text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <dataComponent bindplayVideo="playVideo" ruserId="{{ruserId}}" prlId="{{prlId}}"></dataComponent>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="main-box relative" bind:touchmove="showTip">
+        <image src="../images/topic-bg.png" class="bg absolute"></image>
+        <image src="../images/topic-1.png" class="shcoolimg absolute"></image>
+        <view class="tip2-box absolute" wx:if="{{isShowTips&&isShowTips2}}" bindtap="cloesTip">
+          <image src="../images/tip2.png" class="" style="width:558rpx;height:569rpx;margin:0 auto;margin-top:232rpx;"></image>
+          <image src="../images/down.png" class="downIcon" style="width:57rpx;height:180rpx;"></image>
+        </view>
+        <view class="relative top-box">
+          <image src="../images/topic-top.png" class="bgTop absolute"></image>
+          <image src="../images/right2.png" class="right2 absolute"></image>
+          <image src="../images/pj.png" class="chengji absolute" style="width:380rpx;height:82rpx;"></image>
+          <!-- <view class="tip1 absolute">预习环节</view> -->
+        </view>
+        <view class="absolute paper-box">
+          <view class="relative full">
+            <image src="../images/paperbg2.png" class="paperbg1 absolute"></image>
+            <view class="absolute content-box">
+              <view class="flexbox">
+                <image src="{{teacherHead}}" class="thead"></image>
+                <view>
+                  <view>
+                    <text class="chTea">中教</text>
+                    <text style="color:#5246b1;font-size:34rpx;">{{teacherName}}</text>
+                  </view>
+                  <view style="letter-spacing: 1.8rpx;font-size:30rpx;">针对本节作出了以下的评价</view>
+                </view>
+              </view>
+              <view class="main-content">
+                {{evaluate||''}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class=" btn-box" wx:if="{{!isLiked}}">
+    <button class="btn-box" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+      <image src="../images/btn2.png" class="btn2"></image>
+    </button>
+  </view>
+  <view class=" btn-box" wx:if="{{isLiked}}">
+    <view class="btn1-out-box flexbox">
+      <view class="flexbox left-item">
+        <view class="flexbox" wx:if="{{likeNum>0}}">
+          <!-- <image wx:for="{{userAvatarUrls}}" wx:key="index" src="{{item}}"></image> -->
+          <image src="{{userAvatarUrls[0]}}" class="touxiang"></image>
+          <image src="{{userAvatarUrls[1]}}" class="touxiang touxiang1" wx:if="{{likeNum>2}}"></image>
+        </view>
+        <view class="item3">...等{{likeNum}}人</view>
+        <image src="../images/cup-s.png" class="smlcup"></image>
+      </view>
+      <view class="right-item" bindtap="goToLogin">
+        <image src="../images/btn1.png" class="btn1"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/>
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> -->
+
+<video wx:if="{{isPlaying}}" class="video" autoplay="true" src="{{videoUrl}}" id="video" controls objectFit="cover" bindfullscreenchange="bindfullscreenchange" show-center-play-btn="true" danmu-btn page-gesture="true" enable-progress-gesture="true"></video>

@@ -1,0 +1,35 @@
+<view class='main-container'>
+  <view class='container'>
+    <view class='title-box'>
+      <image class='top-img' src="/public/images/login/step1.png"></image>
+    </view>
+    <view class='phone-box-out'>
+      <view class='phone-box flex-box {{isFocus==1 ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-phone"></text>
+        <input class='phone' type='number' placeholder='输入手机号码' maxlength="11" data-index="1" bindinput="bindKeyInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='errorTip' hidden="{{isPhone}}">请您输入正确的手机号码</view>
+    </view>
+    <view class='verify-box-out'>
+      <view class='verify-box flex-box '>
+        <view class='verify-box-in flex-box {{isFocus==2 ? "activeBor1" : ""}}'>
+          <text class="pkicon pkicon-login-getcode"></text>
+          <input class="verify-txt" type='number' placeholder='输入验证码'  data-index="2" bindfocus="focus" bindblur="no_focus" bindinput="smsCode" maxlength="4"></input>
+        </view>
+        <view class='verify-btn' hidden='{{isGetCodde}}' data-time>{{time}}</view>
+        <view class='activeBg' hidden='{{!isGetCodde}}' bindtap='getCode' data-time>{{time}}</view>
+      </view>
+      <view class='errorTip' hidden="{{isPw}}">验证码错误</view>
+    </view>
+    
+    <view class='next-box'>
+      <button class='next' bindtap='nextStep'>下一步</button>
+    </view>
+    <!-- <view class='resetPw'>
+      <text>重置密码</text>
+    </view> -->
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/bottom-bg.png'></image>
+  </view>
+</view>

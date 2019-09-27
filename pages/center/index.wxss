@@ -1,0 +1,135 @@
+/* pages/center/index.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background: #f6f6f6;
+}
+.flex-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.top-container{
+  height: 340rpx;
+  background: #fde214;
+}
+
+.top-container .personInfo{
+  margin-left: 40rpx;
+  padding-top: 28rpx;
+  justify-content: space-between;
+}
+.headImg{
+  width: 167rpx;
+	height: 167rpx;
+	background-image: linear-gradient(90deg);
+	box-shadow: 0px 2rpx 7rpx 0px 
+		#ff9700;
+	border: solid 9rpx #ffffff;
+  border-radius: 50%;
+
+  position: relative;
+}
+.headImg image:nth-child(1){
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.headImg .icon{
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  bottom:-10rpx;
+  right: 10rpx;
+}
+.names-box{
+  margin-left: 40rpx;
+  color: #444444;
+  flex: 1;
+}
+.enName{
+  font-size: 64rpx;
+}
+.chName{
+  font-size: 30rpx;
+}
+.quitbtn{
+  width: 101rpx;
+	height: 52rpx;
+	background-color: #fa644d;
+	border-radius: 8rpx;
+	border: solid 1rpx rgba(255, 113, 91, 0.29);
+  font-size: 24rpx;
+  color: #ffffff;
+  line-height: 52rpx;
+  text-align: center;
+  margin-right: 24rpx;
+}
+.threeParts{
+  width: 710rpx;
+	height: 223rpx;
+	background-color: #ffffff;
+	box-shadow: 0px 5rpx 17rpx 0px 
+		rgba(206, 206, 206, 0.5);
+	border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 38rpx;
+  justify-content: space-around;
+}
+
+.threeParts .item image{
+  width: 162rpx;
+  height: 131rpx;
+  display: block;
+}
+.threeParts .item text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #444444;
+}
+.list-box{
+  width: 750rpx;
+	height: 223rpx;
+	background-color: #ffffff;
+  margin-top: 136rpx;
+  border-top: solid 1px #eaeaea;
+  border-bottom: solid 1px #eaeaea;
+  padding: 0 10rpx;
+}
+.list{
+  height: 110rpx;
+  border-bottom: solid 1px #ececec;
+  justify-content: space-between;
+}
+.list image{
+  width: 77rpx;
+  height: 79rpx;
+  display: block;
+}
+
+.list .item-m{
+  flex: 1;
+  font-size: 30rpx;
+  color: #444444;
+  margin-left: 10rpx;
+}
+
+.list .item-r{
+  color: #ffe93e;
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.bm-logo{
+  position: fixed;
+  bottom: 132rpx;
+  width: 100%;
+}
+.bm-logo image{
+  width: 209rpx;
+	height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}

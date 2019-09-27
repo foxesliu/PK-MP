@@ -1,0 +1,368 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.0",
+	"appid": "wx2d17f5ef6a69a2ff",
+	"projectname": "PK%E4%BD%9C%E4%B8%9A%E7%B3%BB%E7%BB%9F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 42,
+			"list": [
+				{
+					"id": 0,
+					"name": "course",
+					"pathName": "pages/course/index",
+					"query": "courseId=103&name=2019 Spring Level 3-lesson61 120",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "complete=true11",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "lesson",
+					"pathName": "pages/lesson/index",
+					"query": "lessonName=Lesson 57&lessonId=1201&courseId=98&ruserId=294096&teachId=176&type=0&ruserLessonContent=[object Object],[object Object]&liveAddr=null&eeoVodUrlCollection=null&lessonTime=2019-07-05&stat=0&mode=1&prlId=0&isExtra=0",
+					"scene": 1014
+				},
+				{
+					"id": 3,
+					"name": "lesson-postil",
+					"pathName": "pages/lesson/postil",
+					"query": "prlId=243&type=1",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "dowork-draw",
+					"pathName": "pages/dowork/draw",
+					"query": "lessonName=lesson 97&lessonId=1074&courseId=99&ruserId=295476&teachId=406&type=0&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-05-20&stat=1&mode=0&prlId=384&isExtra=0&secId=1401&snum=1&rightOrWrong=null&score=null&isAsk=true&lessonObj={\"lessonName\":\"lesson 97\",\"lessonId\":\"1074\",\"courseId\":\"99\",\"ruserId\":\"295476\",\"teachId\":\"406\",\"type\":\"1\",\"ruserLessonContent\":\"[object Object],[object Object]\",\"lessonTime\":\"2019-05-20\",\"stat\":\"1\",\"mode\":\"0\",\"prlId\":384,\"isExtra\":\"0\"}",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "lesson-question",
+					"pathName": "pages/lesson/question",
+					"query": "prlId=229&type=0",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "dowork-data",
+					"pathName": "pages/dowork/data",
+					"query": "lessonName=lesson 96&lessonId=1073&courseId=99&ruserId=295476&teachId=406&type=1&ruserLessonContent=[object Object],[object Object]&liveAddr=null&eeoVodUrlCollection=null&lessonTime=2019-05-17&stat=1&mode=1&prlId=387&isExtra=0&secId=1385&snum=1&rightOrWrong=null&score=null&isAsk=false",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": "id=677",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "ask-ask",
+					"pathName": "pages/ask/ask",
+					"query": "secId=1287&stat=1&type=0&snum=1&rightOrWrong=null&score=null&isExtra=0&prlId=250&mode=0&lessonName=lesson 87&lessonId=1064&courseId=99&ruserId=295476&teachId=380&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-04-26&selectedArray=[{\"index\":\"0\",\"value\":\"111\",\"fileType\":\"0\",\"score100\":\"\",\"secCid\":\"1115\",\"open\":false},{\"index\":\"1\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190425/af22f4964a0c429696c4efa536f9587f.mp3\",\"fileType\":\"7\",\"score100\":\"0\",\"secCid\":\"1116\",\"open\":false},{\"index\":\"2\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190425/d664e65f106a424fb725e45fccefb394.mp3\",\"fileType\":\"7\",\"score100\":\"0\",\"secCid\":\"1117\",\"open\":false},{\"index\":\"3\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190425/da6b1323067f4f24b45af591e11bd25c.mp3\",\"fileType\":\"7\",\"score100\":\"0\",\"secCid\":\"1118\",\"open\":false}]",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "commit-audio",
+					"pathName": "pages/commit/audio",
+					"query": "secId=1014&stat=0&type=1&snum=3&rightOrWrong={\"type\":0,\"content\":\"这道题你可以作对的~\"}&score=0&isExtra=0&prlId=69&mode=0&lessonId=1007&courseId=91&ruserId=293773&teachId=389&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-03-27&selectedArray=[{\"index\":\"0\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190311/9aae48b76ab74e94b59a3a2ac61a09d6.jpg\",\"fileType\":\"1\"},{\"index\":\"1\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190330/b2d9df821b7643188539b81a07619e3a.mp3\",\"fileType\":\"7\"}]",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "commit-txt",
+					"pathName": "pages/commit/txt",
+					"query": "secId=1014&stat=0&type=1&snum=3&rightOrWrong={\"type\":0,\"content\":\"这道题你可以作对的~\"}&score=0&isExtra=0&prlId=69&mode=0&lessonId=1007&courseId=91&ruserId=293773&teachId=389&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-03-27&selectedArray=[{\"index\":\"0\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190311/9aae48b76ab74e94b59a3a2ac61a09d6.jpg\",\"fileType\":\"1\"},{\"index\":\"1\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190330/b2d9df821b7643188539b81a07619e3a.mp3\",\"fileType\":\"7\"}]",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "commit-video",
+					"pathName": "pages/commit/video",
+					"query": "stat=3",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "commit-photo",
+					"pathName": "pages/commit/photo",
+					"query": "pageNum=5&snum=1&ruserLessonQaId=492&type=1&from=question",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "result",
+					"pathName": "pages/share/result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "dowork-data-isask",
+					"pathName": "pages/dowork/data-isask",
+					"query": "secId=1014&stat=0&type=1&snum=3&rightOrWrong={\"type\":0,\"content\":\"这道题你可以作对的~\"}&score=0&isExtra=0&prlId=69&mode=0&lessonId=1007&courseId=91&ruserId=293773&teachId=389&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-03-27",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "lesson-question-detail",
+					"pathName": "pages/lesson/question-detail",
+					"query": "qaId=435&snum=2&pageNum=3&qaTime=2019-04-24 16:11:56.0&originator={\"nickName\":\"小强04\",\"avatarUrl\":\"https://files.proudkids.cn/proudkids-ems/20190422/718edd171e8546c580b7a10f9fae3363.png\",\"info\":\"学生给出了回复\"}&lessonId=1066&courseId=99&ruserId=295476&replayTime=2019-04-29 14:08:15&mongodbqaId=5cc70730b6b3d2092ebcbd35&sourceType=0&secId=1250&index=2&stat=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test2",
+					"pathName": "pages/test2/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "share",
+					"pathName": "pages/share/share",
+					"query": "scene=295453,385,122922",
+					"scene": 1012
+				},
+				{
+					"id": -1,
+					"name": "huiben",
+					"pathName": "pages/huiben/huiben",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "lesson-postil-detail",
+					"pathName": "pages/lesson/postil-detail",
+					"query": "mongoDBqaId=5d2c9dbe9d62c218a42170f6&qaId=737&secId=1440",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "complete",
+					"pathName": "pages/login/complete",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "step",
+					"pathName": "pages/login/step",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "center",
+					"pathName": "pages/center/index",
+					"query": "ruserId=294214&prlId=110&cid=122693",
+					"scene": null
+				},
+				{
+					"id": 25,
+					"name": "ask-select",
+					"pathName": "pages/ask/select",
+					"query": "secId=1240&stat=4&type=0&snum=3&rightOrWrong={\"type\":1,\"content\":\"恭喜你，全做对了呢！\"}&score=3&isExtra=0&prlId=229&mode=0&lessonName=lesson 88&lessonId=1065&courseId=99&ruserId=295476&teachId=380&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-04-29",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test3",
+					"pathName": "pages/test/test3",
+					"query": "secId=1005&stat=1&type=3&snum=5&rightOrWrong=null&score=null&isExtra=1&prlId=201&mode=0&lessonId=1005&ruserId=295479&teachId=388&extraTime=2019-04-17 16:32:49.0&thisExtraLessonCount=0&lessonName=lesson 3&courseId=91&isAsk=false",
+					"scene": null
+				},
+				{
+					"id": 27,
+					"name": "ask-audio",
+					"pathName": "pages/ask/ask-audio",
+					"query": "secId=1287&stat=1&type=0&snum=1&rightOrWrong=null&score=null&isExtra=0&prlId=250&mode=0&lessonName=lesson 87&lessonId=1064&courseId=99&ruserId=295476&teachId=380&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-04-26&selectedArray=[{\"index\":\"0\",\"value\":\"111\",\"fileType\":\"0\",\"score100\":\"\",\"secCid\":\"1115\",\"open\":false},{\"index\":\"1\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190425/af22f4964a0c429696c4efa536f9587f.mp3\",\"fileType\":\"7\",\"score100\":\"0\",\"secCid\":\"1116\",\"open\":false},{\"index\":\"2\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190425/d664e65f106a424fb725e45fccefb394.mp3\",\"fileType\":\"7\",\"score100\":\"0\",\"secCid\":\"1117\",\"open\":false},{\"index\":\"3\",\"value\":\"https://files.proudkids.cn/proudkids-ems/20190425/da6b1323067f4f24b45af591e11bd25c.mp3\",\"fileType\":\"7\",\"score100\":\"0\",\"secCid\":\"1118\",\"open\":false}]",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dataq",
+					"pathName": "pages/share/dataQ.js",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "detatl",
+					"pathName": "pages/share/tip-detail",
+					"query": "scene=297125,264,122693",
+					"scene": null
+				},
+				{
+					"id": 29,
+					"name": "lesson-lesson",
+					"pathName": "pages/lesson/lesson",
+					"query": "scene=ruserId|||295476,lessonId|||1072,isExtra|||0,courseId|||99,mode|||0,prlId|||333,lessonName|||lesson 95,teachId|||406,type|||0",
+					"scene": null
+				},
+				{
+					"id": 30,
+					"name": "data-postil",
+					"pathName": "pages/dowork/data-postil",
+					"query": "qaId=654&snum=1&pageNum=1&qaTime=2019-05-13 11:51:11.0&originator={\"nickName\":\"小强04\",\"avatarUrl\":\"https://files.proudkids.cn/proudkids-ems/20190422/718edd171e8546c580b7a10f9fae3363.png\",\"info\":\"学生给出了回复\"}&lessonId=1073&courseId=99&replayTime=2019-06-03 16:53:54&mongodbqaId=5cf5529d9d62c224905686b1&sourceType=0&index=1&type=1&secId=1354&ruserId=295476&mode=0&stat=1",
+					"scene": null
+				},
+				{
+					"id": 31,
+					"name": "draw-postil",
+					"pathName": "pages/dowork/draw-postil",
+					"query": "qaId=718&snum=128&pageNum=1&qaTime=2019-06-04 15:44:52.0&originator={\"nickName\":\"小强04\",\"avatarUrl\":\"https://files.proudkids.cn/proudkids-ems/20190422/718edd171e8546c580b7a10f9fae3363.png\",\"info\":\"学生给出了回复\"}&lessonId=1077&courseId=99&replayTime=2019-06-06 15:33:29&mongodbqaId=5cf934469d62c23f048bf4ee&sourceType=0&index=1&type=0&secId=1425&ruserId=295476&mode=0&stat=1",
+					"scene": null
+				},
+				{
+					"id": 32,
+					"name": "draw-notdo",
+					"pathName": "pages/dowork/draw-notdo",
+					"query": "lessonName=lesson 100&lessonId=1077&courseId=99&ruserId=295453&teachId=406&type=0&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-05-27&stat=3&mode=0&prlId=426&isExtra=0&secId=1426&snum=2&rightOrWrong={\"type\":2,\"content\":\"为什么没有答完毕呢？\"}&score=2&isAsk=true&lessonObj={\"lessonName\":\"lesson 100\",\"lessonId\":\"1077\",\"courseId\":\"99\",\"ruserId\":\"295453\",\"teachId\":\"406\",\"type\":\"1\",\"ruserLessonContent\":\"[object Object],[object Object]\",\"lessonTime\":\"2019-05-27\",\"stat\":\"3\",\"mode\":\"0\",\"prlId\":426,\"isExtra\":\"0\"}",
+					"scene": null
+				},
+				{
+					"id": 33,
+					"name": "lesson2",
+					"pathName": "pages/lesson/lesson",
+					"query": "scene=ruserId|||294468,lessonId|||1302,courseId|||100,prlId|||4415,type|||0,teachId|||406,type|||0,stat|||1,mode|||0,prlId|||4415,isExtra|||0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ipad-res",
+					"pathName": "pages/login/reset",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dowork-draw",
+					"pathName": "pages/dowork/draw",
+					"query": "lessonName=lesson 97&lessonId=1074&courseId=99&ruserId=295476&teachId=406&type=0&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-05-20&stat=1&mode=0&prlId=384&isExtra=0&secId=1401&snum=1&rightOrWrong=null&score=null&isAsk=true&lessonObj={\"lessonName\":\"lesson 97\",\"lessonId\":\"1074\",\"courseId\":\"99\",\"ruserId\":\"295476\",\"teachId\":\"406\",\"type\":\"0\",\"ruserLessonContent\":\"[object Object],[object Object]\",\"lessonTime\":\"2019-05-20\",\"stat\":\"2\",\"mode\":\"0\",\"prlId\":384,\"isExtra\":\"0\"}",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dowork-draw-ipad",
+					"pathName": "pages/dowork/draw-ipad",
+					"query": "lessonName=lesson 97&lessonId=1074&courseId=99&ruserId=295476&teachId=406&type=0&ruserLessonContent=[object Object],[object Object]&lessonTime=2019-05-20&stat=1&mode=0&prlId=384&isExtra=0&secId=1401&snum=1&rightOrWrong=null&score=null&isAsk=true&lessonObj={\"lessonName\":\"lesson 97\",\"lessonId\":\"1074\",\"courseId\":\"99\",\"ruserId\":\"295476\",\"teachId\":\"406\",\"type\":\"1\",\"ruserLessonContent\":\"[object Object],[object Object]\",\"lessonTime\":\"2019-05-20\",\"stat\":\"1\",\"mode\":\"0\",\"prlId\":384,\"isExtra\":\"0\"}",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "postil-detail",
+					"pathName": "pages/lesson/postil-detail",
+					"query": "mongoDBqaId=5cf930729d62c23f048bf4ec&qaId=718&secId=1425",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "url",
+					"pathName": "pages/url/url",
+					"query": "url=http://www.vdouw.com",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "draw-fordata",
+					"pathName": "pages/dowork/draw-fordata",
+					"query": "image=https://files.proudkids.cn/proudkids-ems/20190621/b8c3e1837f32411392f098e41948105c.png",
+					"scene": null
+				},
+				{
+					"id": 40,
+					"name": "s/pages/index",
+					"pathName": "subpackages/pages/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 41,
+					"name": "s/pages/draw",
+					"pathName": "subpackages/pages/draw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 42,
+					"name": "shareIndex",
+					"pathName": "subpackages/pages/index",
+					"query": "scene=295476,453,122922",
+					"scene": null
+				},
+				{
+					"id": 43,
+					"name": "report",
+					"pathName": "subpackages/pages/report",
+					"query": "ruserId=295476&prlId=229",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "s/pages/data",
+					"pathName": "subpackages/pages/data",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "s/pages/comment",
+					"pathName": "subpackages/pages/comment",
+					"query": "mongoDBqaId=5d2c9dbe9d62c218a42170f6&qaId=737&secId=1440",
+					"scene": null
+				}
+			]
+		}
+	}
+}

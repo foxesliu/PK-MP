@@ -1,0 +1,13 @@
+<view class="committed-container">
+  <committedComponent active="{{committedActive}}" bindcommitted="submit"></committedComponent>
+</view>
+
+<view class="list">
+  <view wx:for="{{list}}" wx:key="{{index}}" class="mt-20" bindlongpress="del">
+    <operationAnswerTxtComponent cannotDo="true" txt="{{item}}"></operationAnswerTxtComponent>
+  </view>
+</view>
+
+<view class="commit-footer">
+  <operationAnswerTxtComponent bindinputComplete="txtInputComplete"></operationAnswerTxtComponent>
+</view>

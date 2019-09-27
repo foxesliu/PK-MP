@@ -1,0 +1,18 @@
+<view class="footer">
+  <view class="foot">
+    <view class="item  flex-box" bindtap='goToindex'>
+      <view class="pkicon pkicon-footer-1 {{current==0?'active':''}}" style='font-size:56rpx'></view>
+      <text class=" font20">预习与作业</text>
+    </view>
+    <view class="item  flex-box" bindtap='goToHuiben'>
+      <view class="pkicon pkicon-footer-2" style='font-size:56rpx' wx:if="{{current!=1}}"></view>
+      <view class="pkicon pkicon-footer-2-active {{current==1?'active':''}}" style='font-size:56rpx' wx:if="{{current==1}}"> </view>
+      <text class=" font20">绘本馆</text>
+    </view>
+    <view class="item  flex-box" bindtap='goToCenter'>
+      <view class="pkicon pkicon-footer-3" wx:if="{{current!=2}}" style='font-size:56rpx'></view>
+      <view class="pkicon pkicon-footer-3-active {{current==2?'active':''}}" style='padding:5rpx 0;font-size:48rpx' wx:if="{{current==2}}"></view>
+      <text class=" font20">个人中心</text>
+    </view>
+  </view>
+</view>

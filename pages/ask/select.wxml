@@ -1,0 +1,82 @@
+<view class="top">
+  <image class="image" src="/public/images/wdata/wdata-top-bg.png"></image>
+  <view class="number-index pull-left">{{thisShowNum}}</view>
+  <view class="title pull-left">{{thisShowType}}</view>
+</view>
+
+<view style="height:100rpx;"></view>
+
+<!-- <view wx:if="{{isAsk===false&&stat<=2}}">
+  <view wx:for="{{pageList}}" wx:key="{{index}}">
+    <view style="margin:20rpx;" wx:if="{{item.type==0}}">
+      <operationQuestionTxtComponent txt="{{item.value}}"></operationQuestionTxtComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==1}}">
+      <operationQuestionPhotoComponent resourceUrl="{{item.value}}"></operationQuestionPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==2}}">
+      <operationQuestionAudioComponent resourceUrl="{{item.value}}" audioWorkingId="{{'audio44'+item.secCid}}"></operationQuestionAudioComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==3}}">
+      <operationQuestionVideoComponent resourceUrl="{{item.value}}"></operationQuestionVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==5}}">
+      <operationAnswerPhotoComponent resourceUrl="{{item.answerValue}}" binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==6}}">
+      <operationAnswerVideoComponent audioWorkingId="{{item.secCid}}" resourceUrl="{{item.answerValue}}" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==7}}">
+      <operationAnswerAudioComponent resourceUrl="{{item.answerValue}}" score100="{{item.score100}}" audioWorkingId="{{item.secCid}}" readtxt="{{item.value}}" bindrecordend="recordCallback">
+      </operationAnswerAudioComponent>
+    </view>
+  </view>
+
+  <modalLoadingComponent id="modalLoadingComponent" txt="录音上传中"></modalLoadingComponent>
+  <view class="complete-btn">
+    <view bindtap="completeBtn">本页作答完毕，返回上一层</view>
+  </view>
+</view> -->
+
+<view>
+  <checkQuesionComponent id="checkQuesionComponent"></checkQuesionComponent>
+
+  <view class="committed-container">
+    <committedComponent txt=" 下 一 步" active="{{committedActive}}" bindcommitted="committed"></committedComponent>
+  </view>
+
+  <view wx:for="{{pageList}}" wx:key="{{index}}">
+    <view style="margin:20rpx 0 0 0;">
+      <view class="lesson-page-question-container">
+        <view class="left">
+          <view wx:if="{{item.type==0}}">
+            <operationQuestionTxtComponent cannotDo="true" txt="{{item.value}}"></operationQuestionTxtComponent>
+          </view>
+          <view wx:if="{{item.type==1}}">
+            <operationQuestionPhotoComponent cannotDo="true" resourceUrl="{{item.answerValue?item.answerValue:item.value}}"></operationQuestionPhotoComponent>
+          </view>
+          <view wx:if="{{item.type==2}}">
+            <operationQuestionAudioComponent resourceUrl="{{item.answerValue?item.answerValue:item.value}}" audioWorkingId="{{'audio44'+item.secCid}}"></operationQuestionAudioComponent>
+          </view>
+          <view wx:if="{{item.type==3}}">
+            <operationQuestionVideoComponent resourceUrl="{{item.answerValue?item.answerValue:item.value}}"></operationQuestionVideoComponent>
+          </view>
+          <view wx:if="{{item.type==5}}">
+            <operationAnswerPhotoComponent cannotDo="true" resourceUrl="{{item.answerValue?item.answerValue:item.value}}" binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+          </view>
+          <view wx:if="{{item.type==6}}">
+            <operationAnswerVideoComponent cannotDo="true" audioWorkingId="{{item.secCid}}" resourceUrl="{{item.answerValue?item.answerValue:item.value}}" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+          </view>
+          <view wx:if="{{item.type==7}}">
+            <operationAnswerAudioComponent cannotDo="true" resourceUrl="{{item.answerValue?item.answerValue:item.value}}" score100="{{item.score100}}" audioWorkingId="{{item.secCid}}" readtxt="{{item.value}}" bindrecordend="recordCallback">
+            </operationAnswerAudioComponent>
+          </view>
+        </view>
+        <view class="right">
+          <checkQuestionBtnComponent test="{{index}}" type="{{item.type}}" value="{{item.answerValue?item.answerValue:item.value}}" bindtoggle="questionToggle" open="{{item.open}}" secCid="{{item.secCid}}" score100="{{item.score100}}"></checkQuestionBtnComponent>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="box">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-question"></view>
+  </view>
+  <view class="mid">
+    <image mode="widthFix" src="{{url}}"></image>
+  </view>
+</view>

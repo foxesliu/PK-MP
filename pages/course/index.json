@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "courseComponent": "/components/course/course",
+    "nodataComponent": "/components/no-data/nodata"
+  },
+  "navigationBarBackgroundColor": "#fde214"
+}

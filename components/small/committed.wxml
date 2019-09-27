@@ -1,0 +1,6 @@
+<view class="committed {{active?'active':''}}" bindtap="committed">
+  <view class="left">
+    <text class="pkicon pkicon-wdraw-right"></text>
+  </view>
+  <text class="txt font26 color-white">{{text}}</text>
+</view>

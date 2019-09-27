@@ -1,0 +1,8 @@
+@import './index.wxss';
+
+.foot-comm {
+  position: absolute;
+  left: 0;
+  bottom: 5rpx;
+  width:100%;
+}

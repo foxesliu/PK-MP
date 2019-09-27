@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/login/step",
+    "pages/login/reset",
+    "pages/login/step2",
+    "pages/login/complete",
+    "pages/index/index",
+    "pages/course/index",
+    "pages/dowork/draw",
+    "pages/dowork/draw-ipad",
+    "pages/dowork/draw-postil",
+    "pages/dowork/draw-postil-ipad",
+    "pages/dowork/draw-notdo",
+    "pages/dowork/draw-notdo-ipad",
+    "pages/dowork/draw-fordata",
+    "pages/dowork/draw-fordata-ipad",
+    "pages/dowork/data",
+    "pages/dowork/data-postil",
+    "pages/lesson/index",
+    "pages/lesson/lesson",
+    "pages/lesson/postil",
+    "pages/lesson/question",
+    "pages/lesson/postil-detail",
+    "pages/lesson/question-detail",
+    "pages/commit/txt",
+    "pages/commit/photo",
+    "pages/commit/audio",
+    "pages/commit/draw",
+    "pages/commit/video",
+    "pages/ask/ask",
+    "pages/ask/ask-audio",
+    "pages/ask/ask-txt",
+    "pages/ask/select",
+    "pages/huiben/huiben",
+    "pages/share/share",
+    "pages/share/result",
+    "pages/center/index",
+    "pages/center/mycup",
+    "pages/center/unPage",
+    "pages/center/rules",
+    "pages/test/test",
+    "pages/test2/index",
+    "pages/share/dataQ",
+    "pages/share/tip-detail",
+    "pages/share/draw",
+    "pages/url/url"
+  ],
+  "subpackages": [
+    {
+      "root": "subpackages",
+      "pages": [
+        "pages/draw",
+        "pages/data",
+        "pages/comment",
+        "pages/index",
+        "pages/report"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fde214",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "auto",
+    "resizable": false
+  },
+  "sitemapLocation": "sitemap.json"
+}

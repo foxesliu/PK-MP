@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "modalRedoComponent": "/components/modal/redo",
+    "modalLoadingComponent": "/components/modal/loading"
+  }
+}

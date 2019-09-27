@@ -1,0 +1,21 @@
+<view class='top-box'>
+  <view class="item {{isRead == 0 ? 'active':''}}" bindtap='isRead'>未读</view>
+  <view class="item {{isRead == 1 ? 'active':''}}" bindtap='isRead'>已读</view>
+</view>
+<view class="development-image" wx:if="{{type == 1}}">
+  <image src="/public/images/ask/ask-all.png"></image>
+  <view class="txt">暂时没有最新的提问回复哦</view>
+</view>
+<view class="development-image" wx:if="{{type == 2}}">
+  <image src="/public/images/ask/ask-new.png"></image>
+  <view class="txt">暂时没有任何提问回复哦</view>
+</view>
+<view class="development-image" wx:if="{{type == 3}}">
+  <image src="/public/images/ask/pizhu-all.png"></image>
+  <view class="txt">暂时没有最新的批注回复哦</view>
+</view>
+<view class="development-image" wx:if="{{type == 4}}">
+  <image src="/public/images/ask/pizhu-new.png"></image>
+  <view class="txt">暂时没有任何批注回复哦</view>
+</view>
+<image class="logo-image" src="/public/images/my/my-logo-gray.png"></image>

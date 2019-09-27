@@ -1,0 +1,12 @@
+<view class="reply-student-audio-box">
+  <view class="boxes">
+    <view class="top">
+      <text class="pull-left font22 color-7d">{{date}}</text>
+      <text class="pull-right font28 color-white">{{nickName}}</text>
+    </view>
+    <view class="box txt-box before">{{txt}}</view>
+  </view>
+  <view class="image">
+    <image class="titleimg" src="{{avatarUrl}}"></image>
+  </view>
+</view>

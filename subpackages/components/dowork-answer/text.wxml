@@ -1,0 +1,10 @@
+<view class="audio-container" wx:if="{{txt}}">
+  <view class="box" style="background:#91e224;min-height:133rpx;height:auto">
+    <view class="left">
+         <view class="pkicon pkicon-wdata-w-ask"></view>
+    </view>
+    <view class="middle" style="margin-right:0;">
+      <view class="commit-txt-txt">{{txt}}</view>
+    </view>
+  </view>
+</view>

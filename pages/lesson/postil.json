@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nodataComponent": "/components/no-data/nodata"
+  },
+  "navigationBarTitleText": "老师批注",
+  "navigationBarTextStyle": "black"
+}

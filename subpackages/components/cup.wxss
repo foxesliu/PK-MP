@@ -1,0 +1,6 @@
+.cup {
+  width: 65rpx;
+  height: 65rpx;
+  margin: 0 15rpx 0 0;
+  display: inline-block;
+}

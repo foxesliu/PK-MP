@@ -1,0 +1,108 @@
+<view class="committed-container">
+  <committedComponent bindcommitted="submit" active="{{committedActive}}"></committedComponent>
+</view>
+
+<view wx:for="{{questionsList}}" wx:key="{{index}}">
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.fileType=='1'}}">
+    <replyStudentAudioComponent date="2019-04-20" nickName="{{nickName}}" avatarUrl="{{avatarUrl}}" index="{{index}}" url="{{item.value}}"></replyStudentAudioComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.fileType=='0'}}">
+    <replyStudentTxtComponent date="2019-04-20" nickName="{{nickName}}" avatarUrl="{{avatarUrl}}" txt="{{item.value}}"></replyStudentTxtComponent>
+  </view>
+</view>
+
+<view class="bottom-btn-container">
+  <view class="btn audio" bindtap="gotoCommitAudioPage">
+    <view class="left pull-left">
+      <text class="pkicon pkicon-ask-icon-record"></text>
+    </view>
+    <view class="txt font36 pull-left">发语音</view>
+  </view>
+  <view class="btn text ml-30" bindtap="gotoCommitTxtPage">
+    <view class="left pull-left">
+      <text class="pkicon pkicon-ask-icon-t"></text>
+    </view>
+    <view class="txt font36 pull-left">发文字</view>
+  </view>
+</view>
+
+<view>
+  <view wx:for="{{selectedArray}}" wx:key="{{index}}">
+    <view style="margin:20rpx;" wx:if="{{item.fileType==0}}">
+      <operationQuestionTxtComponent txt="{{item.value}}"></operationQuestionTxtComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==1}}">
+      <operationQuestionPhotoComponent resourceUrl="{{item.value}}"></operationQuestionPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==2}}">
+      <operationQuestionAudioComponent resourceUrl="{{item.value}}" audioWorkingId="{{'audio44'+item.secCid}}"></operationQuestionAudioComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==3}}">
+      <operationQuestionVideoComponent resourceUrl="{{item.value}}"></operationQuestionVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==5}}">
+      <operationAnswerPhotoComponent score100="{{item.score100}}" cannotDo="true" resourceUrl="{{item.value}}" binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==6}}">
+      <operationAnswerVideoComponent cannotDo="true" audioWorkingId="{{item.secCid}}" resourceUrl="{{item.answerValue}}" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==7}}">
+      <operationAnswerAudioComponent cannotDo="true" resourceUrl="{{item.value}}" score100="{{item.score100}}" audioWorkingId="{{item.secCid}}" bindrecordend="recordCallback">
+      </operationAnswerAudioComponent>
+    </view>
+    <!-- <view style="margin:20rpx;" wx:if="{{item.fileType==0}}">
+      <questionTextComponent txt="{{item.value}}"></questionTextComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==1}}">
+      <questionPhotoComponent url="{{item.value}}"></questionPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==2}}">
+      <questionAudioComponent item="{{list[0]}}" index="{{index+1}}"></questionAudioComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==3}}">
+      <questionVideoComponent item="{{videoList[0]}}" index="{{index+88}}"></questionVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==5}}">
+      <answerPhotoComponent isAsk="{{true}}" item="{{item}}" options="{{options}}"></answerPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==6}}">
+      <answerVideoComponent isAsk="{{true}}" item="{{item}}" options="{{options}}" vid="{{index+11}}"></answerVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.fileType==7}}">
+      <answerAudioComponent isAsk="{{true}}" item="{{item}}" options="{{options}}" did="{{index+22}}" readTxt="{{item.value}}"></answerAudioComponent>
+    </view> -->
+  </view>
+</view>
+
+<!-- <view>
+  <view style="margin:20rpx;">
+    <questionAudioComponent item="{{list[0]}}" index="{{index}}"></questionAudioComponent>
+  </view>
+
+  <view style="margin:20rpx;">
+    <answerPhotoComponent resourceUrl="/public/images/temp.jpg"></answerPhotoComponent>
+  </view>
+
+  <view style="margin:20rpx;">
+    <answerVideoComponent resourceUrl="https://files.proudkids.cn/video/poster_winter.mp4" vid="111"></answerVideoComponent>
+  </view>
+
+  <view style="margin:20rpx;">
+    <answerAudioComponent did="1" options="{{options}}" resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"
+      readTxt="本站会持续跟进每"></answerAudioComponent>
+  </view>
+
+  <view style="margin:20rpx;">
+    <questionVideoComponent item="{{videoList[0]}}" index="{{index}}"></questionVideoComponent>
+  </view>
+
+  <view style="margin:20rpx;">
+    <questionTextComponent txt="RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访RP 9的汉化，欢迎访"></questionTextComponent>
+  </view>
+
+  <view style="margin:20rpx;">
+    <questionPhotoComponent url="/public/images/temp.jpg"></questionPhotoComponent>
+  </view>
+
+</view> -->

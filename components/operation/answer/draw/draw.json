@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "modalLoadingComponent": "/components/modal/loading",
+    "toDrawComponent": "/components/modal/to-draw"
+  }
+}

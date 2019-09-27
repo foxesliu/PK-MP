@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "testAudioComponent": "/components/test/audio",
+    "delComponent": "/components/modal/del",
+    "giveupComponent": "/components/modal/giveup",
+    "loadingComponent": "/components/modal/loading",
+    "quitComponent": "/components/modal/quit",
+    "redoComponent": "/components/modal/redo",
+    "toastComponent": "/components/modal/toast",
+    "modalLoadingComponent": "/components/modal/loading",
+    "operationAnswerAudioComponent": "/components/operation/answer/audio/audio",
+    "operationAnswerPhotoComponent": "/components/operation/answer/photo/photo",
+    "operationAnswerTxtComponent": "/components/operation/answer/txt/txt",
+    "operationAnswerVideoComponent": "/components/operation/answer/video/video",
+    "operationQuestionAudioComponent": "/components/operation/question/audio/audio",
+    "operationQuestionPhotoComponent": "/components/operation/question/photo/photo",
+    "operationQuestionTxtComponent": "/components/operation/question/txt/txt",
+    "operationQuestionVideoComponent": "/components/operation/question/video/video"
+  }
+}

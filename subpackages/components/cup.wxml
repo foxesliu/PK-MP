@@ -1,0 +1,1 @@
+<image wx:for="{{stars}}" wx:key="{{index}}" wx:if="{{index<cup}}" class="cup" src="/subpackages/images/cup-s.png"></image>

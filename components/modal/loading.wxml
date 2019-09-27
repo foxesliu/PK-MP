@@ -1,0 +1,7 @@
+<view class="view" wx:if="{{show}}">
+  <view class="box">
+    <view class="text color-white font64">{{txt}}</view>
+    <view wx:if="{{kd}}" style="color:#848484;font-size:33rpx;margin-top:10rpx;">{{kd}}</view>
+    <image class="image" src="/public/images/other/ing.gif"></image>
+  </view>
+</view>

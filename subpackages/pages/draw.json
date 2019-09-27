@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cupComponent": "/subpackages/components/cup",
+    "leftComponent": "/subpackages/components/left"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "navigationBarTitleText": "老师批注",
+  "usingComponents": {
+    "committedComponent": "/components/small/committed",
+    "operationAnswerAudioComponent": "/components/operation/answer/audio/audio",
+    "operationAnswerPhotoComponent": "/components/operation/answer/photo/photo",
+    "operationAnswerTxtComponent": "/components/operation/answer/txt/txt",
+    "operationAnswerVideoComponent": "/components/operation/answer/video/video",
+    "operationQuestionAudioComponent": "/components/operation/question/audio/audio",
+    "operationQuestionPhotoComponent": "/components/operation/question/photo/photo",
+    "operationQuestionTxtComponent": "/components/operation/question/txt/txt",
+    "operationQuestionVideoComponent": "/components/operation/question/video/video",
+    "replyStudentAudioComponent": "/components/reply/student/audio",
+    "replyStudentPhotoComponent": "/components/reply/student/photo",
+    "replyStudentTxtComponent": "/components/reply/student/txt",
+    "replyStudentVideoComponent": "/components/reply/student/video",
+    "replyTeacherAudioComponent": "/components/reply/teacher/audio",
+    "replyTeacherPhotoComponent": "/components/reply/teacher/photo",
+    "replyTeacherTxtComponent": "/components/reply/teacher/txt",
+    "replyTeacherVideoComponent": "/components/reply/teacher/video"
+  }
+}

@@ -1,0 +1,151 @@
+<wxs module="filter" src="../../../public/js/filter.wxs"></wxs>
+
+<view class="page-bg">
+  <image src="/subpackages/images/topic-bg.png"></image>
+</view>
+
+<image class="header" mode="widthFix" src="/subpackages/images/topic-top.png"></image>
+
+<image class="left-text" src="/subpackages/images/topic-1.png"></image>
+
+<view class="section-index">
+  <text style="font-size:56rpx; color:white;">{{(swiperActive+1)<10?'0'+(swiperActive+1):(swiperActive+1)}}</text>
+  <text style="color:#fee447;font-size:32rpx;">/</text>
+  <text style="color:#fee447;font-size:32rpx;">{{sections.length<10?'0'+sections.length:sections.length}}</text>
+</view>
+
+<view class="main-container" wx:if="{{!commentIsShow}}">
+  <swiper style="height:100%" previous-margin="0px" next-margin="0px" bindchange="swiperChange" current="{{swiperActive}}">
+    <swiper-item style="height:100%" wx:for="{{sections}}" wx:key="{{index}}">
+      <view class="top">
+        <view class="title">
+          <image class="pull-left type" wx:if="{{item.type=='0'}}" src="/subpackages/images/type-draw.png"></image>
+          <image class="pull-left type" wx:if="{{item.type=='1'}}" src="/subpackages/images/type-audio.png"></image>
+          <image class="pull-left type" wx:if="{{item.type=='2'}}" src="/subpackages/images/type-phone.png"></image>
+          <image class="pull-left type" wx:if="{{item.type=='3'}}" src="/subpackages/images/type-video.png"></image>
+          <view class="pull-left" style="margin:40rpx 0 0 20rpx;">
+            <cupComponent cup="{{item.score}}"></cupComponent>
+          </view>
+          <image class="bg" src="/subpackages/images/bg-top.png"></image>
+        </view>
+        <view class="result">
+          <image class="pull-left" wx:if="{{item.rOw==1}}" src="/subpackages/images/ye.png"></image>
+          <image class="pull-left" wx:if="{{item.rOw==2}}" src="/subpackages/images/ye2.png"></image>
+          <image class="pull-left" wx:if="{{item.rOw==0}}" src="/subpackages/images/ye3.png"></image>
+          <view class="text pull-left" wx:if="{{item.rOw!=-1}}">{{item.rOwText}}</view>
+          <view class="text pull-left" wx:if="{{item.rOw==-1}}">暂无得分</view>
+        </view>
+      </view>
+
+      <view class="box1">
+        <view class="box2">
+          <view class="box-shadow" wx:if="{{shadowShowed2!=0}}" bindtouchend="hideShadow">
+            <view class="v v1" wx:if="{{shadowShowed2==1}}">
+              <image class="shadow1" src="/subpackages/images/shadow1.png"></image>
+              <image class="shadow2 animated infinite bounce2" src="/subpackages/images/shadow5.png"></image>
+            </view>
+            <view class="v v2" wx:if="{{shadowShowed2==2}}">
+              <image class="shadow3" src="/subpackages/images/shadow3.png"></image>
+              <image class="shadow4 animated bounce infinite" src="/subpackages/images/shadow4.png"></image>
+            </view>
+          </view>
+          <view class="draw-labels" wx:if="{{drawLabelsShow}}">
+            <view class="draw-label" style="left:{{ittc.x*xOffset}}px;top:{{ittc.y*yOffset}}px;" bindtap="goToLabel" data-index="{{index}}" data-idx="{{ggg}}" data-item="{{sections[swiperActive]}}" wx:for="{{drawLabels}}" data-index1="{{swiperActive}}" data-index2="0"
+              data-index3="{{ggg}}" wx:for-index="ggg" wx:for-item="ittc" wx:key="{{ggg}}">
+              <labelComponent index1="{{swiperActive}}" index2="0" index3="{{ggg}}"></labelComponent>
+            </view>
+          </view>
+          <view class="box3">
+            <!-- class=box里放主体内容 -->
+
+            <scroll-view scroll-y="true" class="box" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower">
+              <!-- 画图题开始 -->
+              <view wx:if="{{item.type=='0'}}">
+                <image class="draw-image" mode="widthFix" src="{{item.contentVos[0].answerValue}}"></image>
+              </view>
+              <!-- 画图题结束 -->
+              <!-- 数据题开始 -->
+              <view wx:if="{{item.type!='0'}}" wx:for="{{item.contentVos}}" wx:for-item="itm" wx:for-index="idx" wx:key="{{idx}}">
+                <view class="lesson-page-question-container label" style="margin:20rpx 0;">
+                  <view class="left" wx:if="{{itm.type==12}}">
+                    <drawAnswerComponent answerValue="{{itm.answerValue}}"></drawAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==7}}">
+                    <audioAnswerComponent resourceUrl="{{itm.answerValue}}" score100="{{itm.score100}}" audioWorkingId="{{itm.secCid}}"></audioAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==6}}">
+                    <videoAnswerComponent bindplayVideo="playVideo" audioWorkingId="{{itm.secCid}}" resourceUrl="{{itm.answerValue}}"></videoAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==5}}">
+                    <photoAnswerComponent resourceUrl="{{itm.answerValue}}" audioWorkingId="{{itm.secCid}}"></photoAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==3}}">
+                    <videoQuestionComponent bindplayVideo="playVideo" audioWorkingId="{{itm.secCid}}" resourceUrl="{{itm.value}}"></videoQuestionComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==2}}">
+                    <audioQuestionComponent resourceUrl="{{itm.value}}"></audioQuestionComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==1}}">
+                    <photoQuestionComponent resourceUrl="{{itm.value}}"></photoQuestionComponent>
+                  </view>
+                  <view class="left" wx:if="{{itm.type==0}}">
+                    <textQuestionComponent txt="{{itm.value}}"></textQuestionComponent>
+                  </view>
+
+                  <view class="right">
+                    <view bindtap="goToLabel" data-index="{{index}}" data-idx="{{idx}}" data-item="{{item}}" wx:if="{{itm.pzVoList.length&&itm.pzVoList[0]['originator']}}" data-index1="{{swiperActive}}" data-index2="{{idx}}" data-index3="0">
+                      <view class="label-box">
+                      
+                        <image class="label-image" src="{{filter.getAvatarUrlByNewPage(sections,swiperActive,idx,0)}}"></image>
+
+                        <view class="bot">
+                          <text class="circle"></text>
+                          <text class="txt">批注</text>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view style="height:20rpx;" wx:if="{{item.type!='0'}}"></view>
+              <!-- 数据题结束 -->
+            </scroll-view>
+          </view>
+          <image class="bg" src="/subpackages/images/bg-bottom.png"></image>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class="main-container" wx:if="{{commentIsShow}}">
+  <swiper style="height:100%" previous-margin="0px" next-margin="0px">
+    <swiper-item style="height:100%">
+      <view class="top">
+        <view class="title">
+          <image class="pull-left type" wx:if="{{commentItem.type=='0'}}" src="/subpackages/images/type-draw.png"></image>
+          <image class="pull-left type" wx:if="{{commentItem.type=='1'}}" src="/subpackages/images/type-audio.png"></image>
+          <image class="pull-left type" wx:if="{{commentItem.type=='2'}}" src="/subpackages/images/type-phone.png"></image>
+          <image class="pull-left type" wx:if="{{commentItem.type=='3'}}" src="/subpackages/images/type-video.png"></image>
+          <view class="pull-left" style="margin:40rpx 0 0 20rpx;">
+            <cupComponent cup="{{commentItem.score}}"></cupComponent>
+          </view>
+          <image class="bg" src="/subpackages/images/bg-top.png"></image>
+        </view>
+        <view class="result">
+          <image class="pull-left" wx:if="{{commentItem.rOw==1}}" src="/subpackages/images/ye.png"></image>
+          <image class="pull-left" wx:if="{{commentItem.rOw==2}}" src="/subpackages/images/ye2.png"></image>
+          <image class="pull-left" wx:if="{{commentItem.rOw==0}}" src="/subpackages/images/ye3.png"></image>
+          <view class="text pull-left" wx:if="{{commentItem.rOw!=-1}}">{{commentItem.rOwText}}</view>
+          <view class="text pull-left" wx:if="{{commentItem.rOw==-1}}">暂无得分</view>
+        </view>
+      </view>
+      <view class="box1">
+        <view class="box2">
+          <commentComponent id="commentComponent" bindplayVideo="playVideo" bindback="hideComment" item="{{commentItem}}" ruserId="{{ruserId}}" secId="{{commentItem.secId}}"></commentComponent>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

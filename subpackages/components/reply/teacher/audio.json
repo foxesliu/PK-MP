@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "modalRedoComponent": "/components/modal/redo"
+  }
+}

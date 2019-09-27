@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "testAudioComponent": "/components/test/audio",
+    "delComponent": "/components/modal/del",
+    "giveupComponent": "/components/modal/giveup",
+    "loadingComponent": "/components/modal/loading",
+    "quitComponent": "/components/modal/quit",
+    "redoComponent": "/components/modal/redo",
+    "toastComponent": "/components/modal/toast"
+  }
+}

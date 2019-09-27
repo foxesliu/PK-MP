@@ -1,0 +1,54 @@
+@import "/public/style/pkicon.wxss";
+@import "/public/style/sanfeng.wxss";
+
+.box {
+  width: 100%;
+  min-height: 133rpx;
+  height: auto;
+  background-color: #fff200;
+  box-shadow: 0px 6rpx 0px 0px #ffc900;
+  border-radius: 29rpx;
+  display: flex;
+  padding: 15rpx;
+}
+
+.left {
+  width: 56rpx;
+  min-height: 104rpx;
+  height: auto;
+  background-color: #ffa100;
+  box-shadow: inset 0px 1rpx 13rpx 0px rgba(255, 0, 0, 0.16);
+  border-radius: 20rpx;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.left .pkicon {
+  font-size: 46rpx;
+  color: white;
+  margin-top: 29rpx;
+}
+
+.middle {
+  min-height: 104rpx;
+  height: auto;
+  background-color: #fff;
+  box-shadow: inset 7rpx 7rpx 9rpx 0px rgba(255, 147, 0, 0.26),
+                inset 7rpx 7rpx 0px 0px #ffd800;
+  border-radius: 20rpx;
+  flex: 1;
+  margin: 0 0 0 15rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

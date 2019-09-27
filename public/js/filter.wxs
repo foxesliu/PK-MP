@@ -1,0 +1,105 @@
+function getOriginatorNickName(item) {
+  if (item.originator) {
+    return (JSON.parse(item.originator).nickName ? JSON.parse(item.originator).nickName : '未获取到nickName')
+  } else {
+    return '未获取到nickName'
+  }
+}
+
+function getOriginatorAvatarUrl(item) {
+  if (item.originator) {
+    return (JSON.parse(item.originator).avatarUrl ? JSON.parse(item.originator).avatarUrl : 'https://files.proudkids.cn/default/avate.png')
+  } else {
+    return 'https://files.proudkids.cn/default/avate.png'
+  }
+}
+
+function getOriginatorInfo(item) {
+  if (item.originator) {
+    return (JSON.parse(item.originator).info ? JSON.parse(item.originator).info : '学生给出了回复')
+  } else {
+    return '学生给出了回复'
+  }
+}
+
+function getSourceJsonNickname(item) {
+  if (item.sourceJson) {
+    return (JSON.parse(item.sourceJson).nickName ? JSON.parse(item.sourceJson).nickName : '');
+  } else {
+    return '未获取到nickName'
+  }
+}
+
+function getSourceJsonAvatarUrl(item) {
+  if (item.sourceJson) {
+    return (JSON.parse(item.sourceJson).avatarUrl ?
+      JSON.parse(item.sourceJson).avatarUrl :
+      'https://files.proudkids.cn/default/avate.png')
+  } else {
+    return 'https://files.proudkids.cn/default/avate.png'
+  }
+}
+
+function formatDate(a) {
+  if (a) {
+    return a.replace('.0', '');
+  } else {
+    return '';
+  }
+}
+
+function questionDetailValue(a) {
+  if (a) {
+    return JSON.parse(a).value;
+  } else {
+    return '';
+  }
+}
+
+function questionDetailScore(a) {
+  if (a) {
+    return JSON.parse(a).score100
+  } else {
+    return 0
+  }
+}
+
+function getAvatarUrlByNewPage(a, index1, index2, index3) {
+  // console.log(typeof(JSON.parse((a[index1]['contentVos'][index2]['pzVoList'][index3])['originator']))['avatarUrl']);
+  if (a[index1]['contentVos'][index2]) {
+    return ((JSON.parse((a[index1]['contentVos'][index2]['pzVoList'][index3])['originator']))['avatarUrl'])
+  } else {
+    return 'https://files.proudkids.cn/default/ct.png'
+  }
+}
+
+function scoreToLetter(a) {
+  if (!a) {
+    return '';
+  } else if (a == 0) {
+    return '1';
+  } else if (a > 0 && a <= 20) {
+    return '3';
+  } else if (a > 20 && a <= 40) {
+    return '4';
+  } else if (a > 40 && a <= 60) {
+    return '5';
+  } else if (a > 60 && a <= 80) {
+    return '6';
+  } else if (a > 80 && a <= 100) {
+    return '7';
+  }
+}
+
+module.exports = {
+  getOriginatorNickName: getOriginatorNickName,
+  getOriginatorAvatarUrl: getOriginatorAvatarUrl,
+  getOriginatorInfo: getOriginatorInfo,
+  formatDate: formatDate,
+  questionDetailValue: questionDetailValue,
+  questionDetailScore: questionDetailScore,
+  getSourceJsonNickname: getSourceJsonNickname,
+  getSourceJsonAvatarUrl: getSourceJsonAvatarUrl,
+  scoreToLetter: scoreToLetter,
+  getAvatarUrlByNewPage: getAvatarUrlByNewPage
+};

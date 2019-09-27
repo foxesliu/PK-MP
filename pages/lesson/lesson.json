@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "lessonComponent": "/components/lesson/lesson",
+    "footerComponent": "/components/footer/footer-2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "modalLoadingComponent": "/components/modal/loading"
+  }
+}

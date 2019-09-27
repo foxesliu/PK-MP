@@ -1,0 +1,104 @@
+<view wx:if="{{stat>2&&labelShow11}}">
+  <drawLabelComponent secId="{{options.secId}}" labelList="{{labelList}}" labelShow="{{labelShow}}"></drawLabelComponent>
+  {{options.secId}}
+</view>
+
+<view wx:if="{{stat>2}}">
+  <resultComponent rightOrWrong="{{rightOrWrong}}" bindchangeLabelShow="changeLabelShow"></resultComponent>
+</view>
+
+<view wx:if="{{canvasWidth}}">
+  <canvas canvas-id="canvas" disable-scroll="true" bindtouchstart="doodleStart" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;position:fixed;top:0;left:{{canvasIsShow?0:-canvasWidth+'px'}}" bindtouchmove="doodleMove">
+  </canvas>
+</view>
+
+<view style="height:{{canvasHeight}}px;width:{{canvasWidth}}px;" class="canvas-image temp-image" wx:if="{{tempImageSrc&&!canvasIsShow}}">
+  <image style="height:{{canvasHeight}}px;width:{{canvasWidth}}px;" src="{{tempImageSrc}}"></image>
+</view>
+
+<view style="height:{{canvasHeight}}px;width:{{canvasWidth}}px;" class="canvas-image">
+  <image style="height:{{canvasHeight}}px;width:{{canvasWidth}}px;" src="{{imageSrc}}"></image>
+</view>
+
+<view class="footer">
+  <view class="btn cancel" bindtap="cancel">
+    <view class="pkicon pkicon-wdraw-cancel"></view>
+  </view>
+  <view class="mbtn audio-btn" wx:if="{{footerhasAudio}}" bindtap="showAudioBox" style="right:{{!footerAudioIsHigh?'-63rpx':0}}rpx;margin-left:-160rpx">
+    <view class="white-bg red-bg pull-left">
+      <view wx:if="{{!footerAudioIsHigh}}" class="audio-play-btn pkicon pkicon-wdata-icon-right">
+        <view class="path1"></view>
+      </view>
+      <view wx:if="{{footerAudioIsHigh}}" class="audio-play-btn pkicon pkicon-wdraw-pause">
+      </view>
+    </view>
+    <view class="second pull-left" wx:if="{{footerAudioIsHigh&&audioShowSecond}}">
+      <!-- <view class="pkicon pkicon-wdata-sound pull-left"></view> -->
+      <text class="pull-left">{{audioShowSecond}}''</text>
+    </view>
+  </view>
+  <view class="mbtn" bindtap="showPenBox" style="right:{{footerIsHigh?'350rpx':0}}">
+    <view class="white-bg">
+      <image src="{{drawOrEraser?'/public/images/wdraw/draw-choose1.png':'/public/images/wdraw/draw-choose2.png'}}"></image>
+    </view>
+  </view>
+  <!-- <view class="quit" bindtap="quit">退出</view> -->
+  <view class="btn submit" bindtap="upload">
+    <view class="pkicon pkicon-wdraw-right"></view>
+  </view>
+</view>
+
+<toastComponent id="toastComponent" txt="已还原到本次开始作答的状态"></toastComponent>
+<giveupComponent id="giveupComponent" bindgiveupEsc="giveupEsc" bindgiveupcallback="giveupcallback"></giveupComponent>
+
+<view class="shadow" wx:if="{{shadowIsShow}}"></view>
+
+<view class="draw-type-box" style="right:{{drawTypeIsShow?0:'-350rpx'}}">
+  <view class="item" bindtap="clickPen">
+    <image src="/public/images/wdraw/draw-choose1.png"></image>
+    <view class="font16">写字笔</view>
+  </view>
+  <view class="item" bindtap="clickEraser">
+    <image src="/public/images/wdraw/draw-choose2.png"></image>
+    <view class="font16">橡皮</view>
+  </view>
+  <view class="item" bindtap="clickPensize">
+    <image src="/public/images/wdraw/draw-choose3.png"></image>
+    <view class="font16">粗细</view>
+  </view>
+  <view class="item" bindtap="clickColor">
+    <image src="/public/images/wdraw/draw-choose4.png"></image>
+    <view class="font16">调色板</view>
+    <text style="background:{{colors[colorIndex]}}"></text>
+  </view>
+</view>
+
+<view class="draw-type-box pensize-box" style="right:{{sizeBoxIsShow?0:'-350rpx'}}">
+  <view class="top o-hidden">
+    <view class="image">
+      <image src="/public/images/wdraw/draw-choose3.png"></image>
+    </view>
+    <view class="text font16">粗细</view>
+  </view>
+  <view class="size-box">
+    <view class="ite {{index==pixelIndex?'active':''}}" wx:for="{{pixel}}" wx:key="{{index}}">
+      <view bindtap="selectPenSize" data-index="{{index}}">
+        <image src="/public/images/wdraw/draw-pen{{index+1}}.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="draw-type-box pensize-box" style="right:{{drawColorIsShow?0:'-350rpx'}}">
+  <view class="top o-hidden">
+    <view class="image">
+      <image src="/public/images/wdraw/draw-choose4.png"></image>
+    </view>
+    <view class="text font16">颜色</view>
+  </view>
+  <view class="color-box">
+    <view class="i {{index==colorIndex?'active':''}}" wx:for="{{colors}}" wx:key="{{index}}">
+      <view style="background:{{colors[index]}}" bindtap="selectColor" data-index="{{index}}"></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+@import '/public/style/sanfeng.wxss';
+@import '/public/style/pkicon.wxss';
+
+.footer {
+  width: 100%;
+  /* height: 561rpx; */
+}
+
+.footer .bg {
+  width: 100%;
+  height: 561rpx;
+}
+
+.foot .pkicon {
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 64rpx;
+  color: white;
+  margin: 0 auto;
+  text-shadow: 0 2rpx 4rpx #bd3000;
+}
+
+.foot .item.active .pkicon {
+  background-color: #e0754d;
+  box-shadow: inset 0px 1rpx 11rpx 0px #c33900;
+  border-radius: 6.5rpx;
+}
+
+.footer .foot {
+  padding-top: 30rpx;
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}

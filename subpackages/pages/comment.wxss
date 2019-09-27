@@ -1,0 +1,40 @@
+@import './draw.wxss';
+
+.comment-box {
+  padding-bottom: 158rpx;
+}
+
+.comment-box .box {
+  background: black;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+
+.box {
+  position: relative;
+  z-index: 9;
+  padding-bottom: 20rpx;
+}
+
+.back {
+  width: 185rpx;
+  height: 68rpx;
+  line-height: 66rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border: solid 2rpx #fff;
+  position: fixed;
+  left: 50%;
+  bottom: 170rpx;
+  transform: translate(-30rpx, -50%);
+  z-index: 10;
+  font-size: 29rpx;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video {
+  position: fixed;
+  left: 180rpx;
+  top: 200rpx;
+}

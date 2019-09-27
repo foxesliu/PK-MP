@@ -1,0 +1,263 @@
+/* pages/share/share.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background: #000000;
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.relative{
+  position: relative;
+}
+
+.container-box{
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+.bg-box{
+  position: absolute;
+  background: #FDE214;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -1;
+}
+.bg-box image{
+  display: block;
+  width: 100%;
+}
+.bg-box image:nth-child(1){
+  display: block;
+  height: 654rpx;
+}
+.main-content-box-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8)
+}
+.textZan{
+  font-size: 30rpx;
+  color: #ffffff;
+  font-family: PingFangSC-Medium;
+}
+
+.main-content-box{
+  width: 710rpx;
+  margin-top: -42rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.outside-box{
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin-top: 244rpx;
+}
+.content-top-box{
+  width: 710rpx;
+	height: 307rpx;
+	/* background-color: #fff32d; */
+  flex-direction: column;
+  
+	/* border-radius: 8px; */
+  padding-top:20rpx;
+  position: relative;
+}
+.bg-img{
+  position: absolute;
+  width: 710rpx;
+  top: 0;
+}
+.bg-img image{
+  width: 710rpx;
+  height: 307rpx;
+}
+.content-inside{
+  z-index: 100;
+}
+.content-top-box .top image{
+  width: 136rpx;
+	height: 136rpx;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+
+} 
+.content-top-box .top .stuName{
+ margin-top: 18rpx;
+ font-size: 36rpx;
+ color: #231f02;
+ text-align: center;
+}
+.icon-cup-box{
+  margin-top: 18rpx;
+}
+.icon-cup-box image{
+  width: 27rpx;
+	height: 25rpx;
+   margin: 0 5rpx;
+}
+
+.hdimage-box image{
+  width: 49rpx;
+	height: 49rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right:5rpx; 
+}
+.person-number{
+  font-size: 22rpx;
+  color: #444444;
+  margin-left: 8rpx;
+}
+.text1{
+  margin: 12rpx 0;
+}
+.btn-zan-box{
+  
+}
+.zan-box{
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx; 
+  width: 674rpx;
+  margin:  0 auto;
+  margin-top: 12rpx;
+  border-top: 1px solid #f3f3f3;
+}
+.btn-zan{
+  width: 320rpx;
+	height: 64rpx;
+	background-color: #f5f5f5;
+	border-radius: 22rpx;
+  color: #444444;
+  font-size: 22rpx;
+  line-height: 64rpx;
+  padding-left: 12rpx;
+}
+.btn-zan .like-btn{
+  /* text-align: center; */
+  width: 54rpx;
+	height: 54rpx;
+	background-image: linear-gradient(
+		#ffffff, 
+		#ffffff), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0px 2rpx 8rpx 0px 
+		rgba(193, 193, 193, 0.5);
+	border-radius: 17rpx;
+  color: #ff7138;
+  font-size: 24rpx;
+}
+.btn-zan .like-btn .pkicon{
+  margin-left: -10rpx;
+}
+.btn-zaned{
+  width: 204rpx;
+	height: 64rpx;
+	background-color: #f5f5f5;
+	border-radius: 22rpx;
+  font-size: 22rpx;
+  line-height: 64rpx;
+  color: #444444;
+  text-align: center;
+}
+
+.btn-zaned .icon-zan{
+  display: inline-block;
+  width: 54rpx;
+	height: 54rpx;
+  line-height: 54rpx;
+ background-image: linear-gradient(
+		#ff7138, 
+		#ff7138), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+  border-radius: 17rpx;
+  color: #ffffff;
+  margin-left: 12rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.content-bottom-box{
+  background-color: #ffffff;
+}
+.content-bottom-box .txt{
+  text-align: center;
+ padding-top: 18rpx;
+}
+.content-bottom-box .txt text{
+  color:#ff7026;
+  font-size: 24rpx;
+  padding: 0 3rpx;
+}
+.teacher-info{
+  align-items: flex-end;
+}
+.thead{
+  width: 84rpx;
+	height: 84rpx;
+  border-radius: 50%;
+  background: rebeccapurple;
+  overflow: hidden;
+ margin: 16rpx 0rpx 0 32rpx;
+}
+.thead image{
+  height: 100%;
+}
+.teacher-type{
+  position: absolute;
+  right: -3rpx;
+  bottom: -6rpx;
+  width: 54rpx;
+	height: 28rpx;
+  font-size: 20rpx;
+  background-image: linear-gradient(137deg, 
+		#ff9100 0%, 
+		#f76b1c 100%);
+	box-shadow: 0px 2rpx 0px 0px 
+		#c54d00;
+	border-radius: 8rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.teacher-name{
+  margin-left: 20rpx;
+  color: #666666;
+}
+.text2{
+  width: 690rpx;
+  background-color: #ededed;
+  border-radius: 4rpx;
+  color: #666666;
+  padding: 10rpx;
+  margin:  0 auto;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+.btn-result{
+  width: 350rpx;
+	height: 83rpx;
+  margin-top: 45rpx;
+	background-image: linear-gradient(180deg, 
+		#8cd100 0%, 
+		#509f00 100%);
+	box-shadow: 0px 4rpx 0px 0px 
+		#4f8701;
+	border-radius: 22rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+}

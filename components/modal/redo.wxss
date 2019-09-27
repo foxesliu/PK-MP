@@ -1,0 +1,32 @@
+@import "/public/style/pkicon.wxss";
+@import "/public/style/sanfeng.wxss";
+
+.reset-box {
+  width: 471rpx;
+  height: 443rpx;
+  background-color: #000;
+  border-radius: 44rpx;
+  opacity: 0.75;
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.reset-box image {
+  width: 185rpx;
+  height: 158rpx;
+}
+
+.reset-box .text {
+  width: 100%;
+  font-size: 40rpx;
+  color: white;
+  text-align: center;
+  margin-top: 40rpx;
+}

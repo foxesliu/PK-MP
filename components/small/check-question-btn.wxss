@@ -1,0 +1,41 @@
+@import "/public/style/sanfeng.wxss";
+@import "/public/style/pkicon.wxss";
+
+.check-question-btn {
+  width: 156rpx;
+  height: 75rpx;
+  background-color: #fff;
+  box-shadow: 0px 2rpx 15rpx 0px rgba(185, 185, 185, 0.5);
+  border-radius: 37.5rpx;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 29rpx;
+}
+
+.check-question-btn view {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  background-color: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12rpx;
+}
+
+.check-question-btn view.active {
+  background-color: #ff7900;
+}
+
+.check-question-btn image {
+  width: 80rpx;
+  height: 75rpx;
+}
+
+.check-question-btn .pkicon {
+  font-size: 40rpx;
+  color: white;
+}

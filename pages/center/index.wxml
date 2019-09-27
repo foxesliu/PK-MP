@@ -1,0 +1,51 @@
+<!--pages/center/index.wxml-->
+<view class='top-container'>
+  <view class='personInfo flex-box'>
+    <view class='headImg'>
+      <image src='{{headImg }}'></image>
+      <image src='/public/images/my/carmered.png' class='icon' bindtap='changeHdImg'></image>
+    </view>
+    <view class='names-box'>
+      <view class='enName' wx:if="{{isEnName}}">{{enName}}</view>
+      <view class='chName'>{{name}}</view>
+    </view>
+    <view class='quitbtn' bindtap='quit'>退出</view>
+  </view>
+  <view class='flex-box threeParts'>
+    <view class='item' bindtap='goToLessonEnd'>
+      <image src='/public/images/my/my-icon1.png'></image>
+      <text>已完结课程</text>
+    </view>
+    <view class='item' bindtap='goToMyCup'>
+      <image src='/public/images/my/my-icon2.png'></image>
+      <text>我的奖杯</text>
+    </view>
+    <view class='item' bindtap='goToCards' bindtap='goToUnPage'>
+      <image src='/public/images/my/my-icon3.png'></image>
+      <text>邀请卡</text>
+    </view>
+  </view>
+</view>
+<view hidden="{{isCropper}}">
+  <image-cropper id="image-cropper" limit_move="{{true}}" disable_rotate="{{true}}" width="{{width}}" height="{{height}}" imgSrc="{{src}}" bindload="cropperload" bindimageload="loadimage" bindtapcut="clickcut" isCropper="{{isCropper}}" bindchangeCropper="changeCropper" bindchangeHead="changeHead"></image-cropper>
+  
+</view>
+
+<view class='list-box'>
+  <view class='flex-box list'>
+    <image src='/public/images/my/my-icon4.png'></image>
+    <view class='item-m' bindtap='goToUnPage'>兑换礼物</view>
+    <view class='pkicon pkicon-my-right-arrow item-r'></view>
+  </view>
+  <view class='flex-box list'>
+    <image src='/public/images/my/my-icon5.png'></image>
+    <view class='item-m' bindtap='goToUnPage'>邮寄地址管理</view>
+    <view class='pkicon pkicon-my-right-arrow item-r'></view>
+  </view>
+</view>
+<view class='bm-logo'>
+  <image src='/public/images/my/my-logo-gray.png'></image>
+  </view>
+
+
+<footerComponent active="2"></footerComponent>

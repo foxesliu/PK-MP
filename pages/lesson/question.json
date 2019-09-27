@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nodataComponent": "/components/no-data/nodata"
+  },
+  "navigationBarTitleText": "我的提问",
+  "navigationBarTextStyle": "black"
+}

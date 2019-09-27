@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "resultComponent": "/components/result/result",
+    "drawLabelComponent": "/components/label/draw",
+    "giveupComponent": "/components/modal/giveup",
+    "toastComponent": "/components/modal/toast"
+  },
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTitleText": "画图题"
+}

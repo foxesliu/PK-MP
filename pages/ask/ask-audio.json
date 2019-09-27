@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "committedComponent": "/components/small/committed",
+    "answerAudioAskComponent": "/components/answer/audio-ask",
+    "commitAudioComponent": "/components/commit/audio",
+    "modalLoadingComponent": "/components/modal/loading",
+    "operationAnswerAudioComponent": "/components/operation/answer/audio/audio"
+  }
+}

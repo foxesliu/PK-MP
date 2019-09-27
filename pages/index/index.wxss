@@ -1,0 +1,142 @@
+page {
+  background: #fde214;
+}
+
+.top {
+  height: 92rpx;
+  font-size: 64rpx;
+  background: #fde214;
+  padding-left: 20rpx;
+}
+
+.tower-swiper .tower-item {
+  width: 516rpx;
+  height: 746rpx;
+  /* margin-left: -258rpx;
+  transform:scale(0.5); */
+}
+
+.complete-image {
+  position: absolute;
+  left: 50%;
+  margin-left: -121rpx;
+  bottom: 150rpx;
+  width: 243rpx;
+  height: 181rpx;
+}
+
+.bg-img {
+  position: relative;
+  width: 516rpx;
+  height: 746rpx;
+}
+
+.bg-img image.bg-image {
+  width: 516rpx;
+  height: 746rpx;
+}
+
+.text1 {
+  width: 515rpx;
+  height: 90rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: #8f1806;
+  position: absolute;
+  left: 0;
+  top: 130rpx;
+  z-index: 1;
+}
+
+.text2 {
+  top: 310rpx;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 78rpx;
+  z-index: 1;
+  margin-left: -22rpx;
+  color: white;
+}
+
+.tower-swiper {
+  height: 746rpx;
+  margin-top: 60rpx;
+}
+
+.tower-swiper .no-data {
+  width: 556rpx;
+  height: 591rpx;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.tower-swiper .no-data image {
+  width: 556rpx;
+  height: 591rpx;
+}
+
+.ipad-container .top {
+  line-height: 63rpx;
+  font-size:45rpx;
+  padding-left: 20rpx;
+}
+.ipad-container .tower-swiper .tower-item {
+  width: 364rpx;
+  height: 506rpx;
+  left:52%;
+}
+.ipad-container .complete-image {
+  position: absolute;
+  left: 50%;
+  margin-left: -121rpx;
+  bottom: 150rpx;
+  width: 243rpx;
+  height: 181rpx;
+} 
+.ipad-container .bg-img {
+  position: relative;
+  width:364rpx;
+  height: 746rpx;
+}
+.ipad-container .bg-img image.bg-image {
+  width: 364rpx;
+  height: 523rpx;
+}
+.ipad-container .text1 {
+  width: 100%;
+  height: 53rpx;
+  text-align: center;
+  font-size: 38rpx;
+  color: #8f1806;
+  position: absolute;
+  left: 0;
+  top: 96rpx;
+  z-index: 1;
+}
+
+.ipad-container .text2 {
+  top: 209rpx;
+}
+.ipad-container .btn {
+  display: block;
+  position: absolute;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 43rpx;
+  z-index: 1;
+  margin-left: -10rpx;
+  color: white;
+  font-size: 18rpx;
+}
+.ipad-container .tower-swiper {
+  height: 523rpx;
+  margin-top: 60rpx;
+}

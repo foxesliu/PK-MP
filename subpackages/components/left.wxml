@@ -1,0 +1,26 @@
+<view  bindtap="touchStart2">
+  <view class="b-view tran-all" style="width:{{!sShow?'244rpx':'75rpx'}}" bindtap="changeShow">
+    <view class="l {{active==0?'active':''}}" bindtap="gotoPage" data-id="0" style="margin-top:{{hasComment?'30rpx':'95rpx'}}">
+      <image class="pull-left" src="/subpackages/images/left-1.png"></image>
+      <text class="pull-left">成绩单</text>
+    </view>
+    <view>
+      <image class="li" src="/subpackages/images/lin.png"></image>
+    </view>
+    <view class="l {{active==1?'active':''}}" bindtap="gotoPage" data-id="1">
+      <image class="pull-left" src="/subpackages/images/left-2.png"></image>
+      <text class="pull-left">作业本</text>
+    </view>
+    <view wx:if="{{hasComment}}">
+      <image class="li" src="/subpackages/images/lin.png"></image>
+    </view>
+    <view class="l {{active==2?'active':''}}" wx:if="{{hasComment}}" bindtap="gotoPage" data-id="2">
+      <image class="pull-left" src="/subpackages/images/left-3.png"></image>
+      <text class="pull-left">本节评价</text>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="r-view tran-all" style="left:{{sShow?'75rpx':'244rpx'}}" bindtap="changeActive">
+  <image class="tran-all" src="/subpackages/images/left-arrow.png" style="transform:{{!sShow?'rotate(180deg)':'rotate(0deg)'}}"></image>
+</view> -->

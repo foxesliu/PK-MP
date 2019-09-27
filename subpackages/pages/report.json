@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "leftComponent": "/subpackages/components/left",
+    "dataComponent": "/subpackages/components/data/data"
+  }
+}

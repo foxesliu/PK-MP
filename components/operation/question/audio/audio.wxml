@@ -1,0 +1,21 @@
+<view class="box">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-question"></view>
+  </view>
+  <view class="middle">
+    <view class="pull-left pkicon pkicon-wdata-sound"></view>
+    <!-- <view class="pull-left second" wx:if="{{!duration}}">{{playingShowSecond}}</view> -->
+    <view class="pull-left second">{{playingShowSecond}}</view>
+    <!-- <view class="pull-left second" wx:if="{{duration}}">{{playingShowSecond}}''</view> -->
+  </view>
+  <view class="right" bindtap="play" hover-class="click-active" wx:if="{{!isPlaying}}">
+    <text class="text">点击播放</text>
+    <text class="pkicon pkicon-wdata-icon-right"><text class="path1"></text></text>
+  </view>
+  <view class="right" bindtap="stop" hover-class="click-active" wx:if="{{isPlaying}}">
+    <text class="text">点击停止</text>
+    <view class="pkicon pkicon-wdraw-pause"></view>
+  </view>
+</view>
+
+<modalRedoComponent id="modalRedoComponent"></modalRedoComponent>

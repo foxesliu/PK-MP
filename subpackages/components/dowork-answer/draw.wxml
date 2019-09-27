@@ -1,0 +1,8 @@
+<view style="height:auto" class="box answer-component-video answer-component-photo" wx:if="{{answerValue}}">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-ask"></view>
+  </view>
+  <view class="mid">
+    <image mode="widthFix" bindtap="showPic" data-src="{{answerValue}}" src="{{answerValue}}"></image>
+  </view>
+</view>

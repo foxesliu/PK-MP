@@ -1,0 +1,40 @@
+<view class="page-bg" wx:if="{{isAsk}}"></view>
+
+<view class="tab-container">
+  <view class="tab">
+    <view class="v {{isAsk?'is-ask':''}}" bindtap="gotoPostil">
+      <text class="text">老师批注</text>
+      <text class="span" wx:if="{{pzLength}}">{{pzLength}}</text>
+    </view>
+    <view class="v {{isAsk?'is-ask':''}}" bindtap="gotoQuestion">
+      <text class="text">我的提问</text>
+      <text class="span" wx:if="{{twLength}}">{{twLength}}</text>
+    </view>
+    <view class="n {{isAsk?'is-ask':''}}" bindtap="clickAsk">
+      <image src="/public/images/lesson/ask-yellow.png"></image>
+      <text class="text {{isAsk?'color-white':''}}">{{isAsk?'关闭提问':'发起提问'}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="list" style="padding-bottom:200rpx;">
+  <view class="item" wx:for="{{list}}" wx:key="index">
+    <view bindtap="gotoWork" data-index="{{index}}" data-item="{{item}}" isAsk="{{isAsk}}" data-type="{{item.type}}" data-stat="{{item.stat}}">
+      <lessonComponent item="{{item}}" index="{{index}}" isAsk="{{isAsk}}"></lessonComponent>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view hover-class="click-active">
+    <view style="position:relative;z-index:111;padding:10rpx 100rpx;width:100%;height:326rpx;" bindtap="submit" wx:if="{{thisLessonStat<2}}">
+      <image class="image" src="/public/images/lesson/submit2.png"></image>
+    </view>
+  </view>
+  
+  <image class="image" wx:if="{{thisLessonStat>=2}}" src="/public/images/lesson/submit-ed.png"></image>
+  <image class="bg" src="/public/images/lesson/bottom-bg2.png"></image>
+  <view class="foot-comm">
+    <footerComponent active="0"></footerComponent>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view class="reply-student-audio-box">
+  <view class="boxes">
+    <view class="top">
+      <text class="pull-left font22 color-7d">{{date}}</text>
+      <text class="pull-right font28 color-white">{{nickName}}</text>
+    </view>
+    <view class="box before">
+      <view class="left">
+        <text class="pkicon pkicon-wdata-sound color-ff8739"></text>
+        <!-- <text class="font26 ml-10">{{playingShowSecond}}</text> -->
+        <!-- <text class="font26 ml-10" wx:if="{{!duration}}">{{playingShowSecond}}</text> -->
+        <text class="font26 ml-10">{{playingShowSecond}}</text>
+      </view>
+      <view class="right btn" wx:if="{{!isPlaying}}" bindtap="play">
+        <text class="font26 color-548e05">点击播放</text>
+        <text class="pkicon pkicon-wdata-icon-right font26 ml-5 color-548e05">
+          <text class="path1"></text>
+        </text>
+      </view>
+      <view class="right btn" wx:if="{{isPlaying}}" bindtap="stop">
+        <text class="font26 color-548e05">点击停止</text>
+        <text class="pkicon pkicon-wdraw-pause font26 ml-5 color-548e05"></text>
+      </view>
+    </view>
+  </view>
+  <view class="image">
+    <image class="titleimg" src="{{avatarUrl}}"></image>
+  </view>
+</view>
+
+<modalRedoComponent id="modalRedoComponent"></modalRedoComponent>

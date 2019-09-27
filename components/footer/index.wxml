@@ -1,0 +1,17 @@
+<view class="footer" style="{{isComplete?'bottom:-60rpx':''}}">
+  <image class="bg" src="/public/images/home/home-bottom-bg.png"></image>
+  <view class="foot" wx:if="{{!isComplete}}">
+    <view class="item {{current==0?'active':''}}">
+      <view class="pkicon pkicon-footer-1"></view>
+      <text class="color-white font20">预习与作业</text>
+    </view>
+    <view class="item {{current==1?'active':''}}" bindtap="gotoHuiben">
+      <view class="pkicon pkicon-footer-2"></view>
+      <text class="color-white font20">绘本馆</text>
+    </view>
+    <view class="item {{current==2?'active':''}}" bindtap="gotoCenter">
+      <view class="pkicon pkicon-footer-3"></view>
+      <text class="color-white font20">个人中心</text>
+    </view>
+  </view>
+</view>

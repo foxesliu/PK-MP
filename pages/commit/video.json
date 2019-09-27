@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "committedComponent": "/components/small/committed",
+    "answerAudioComponent": "/components/answer/audio",
+    "commitAudioComponent": "/components/commit/audio",
+    "commitVideoComponent": "/components/commit/video",
+    "operationAnswerVideoComponent": "/components/operation/answer/video/video"
+  }
+}

@@ -1,0 +1,22 @@
+.committed-container {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.commit-footer {
+  padding: 0 20rpx;
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.list {
+  padding: 0 20rpx;
+}
+
+page {
+  background: black;
+}

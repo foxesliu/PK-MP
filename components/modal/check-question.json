@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "checkQuestionBtn": "/components/small/check-question-btn"
+  }
+}

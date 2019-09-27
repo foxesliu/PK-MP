@@ -1,0 +1,6 @@
+@import './audio.wxss';
+
+.list {
+  padding-bottom: 200rpx;
+}
+

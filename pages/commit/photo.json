@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "committedComponent": "/components/small/committed",
+    "commitPhotoComponent": "/components/commit/photo",
+    "operationAnswerPhotoComponent": "/components/operation/answer/photo/photo"
+  }
+}

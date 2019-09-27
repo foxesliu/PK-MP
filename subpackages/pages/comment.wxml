@@ -1,0 +1,148 @@
+<wxs module="filter" src="../../public/js/filter.wxs"></wxs>
+
+<view class="page-bg">
+  <image src="/subpackages/images/topic-bg.png"></image>
+</view>
+
+<leftComponent></leftComponent>
+
+<image class="header" mode="widthFix" src="/subpackages/images/topic-top.png"></image>
+
+<image class="left-text" src="/subpackages/images/topic-1.png"></image>
+
+<view class="footer">
+  <image src="/subpackages/images/btn2.png"></image>
+</view>
+
+<video wx:if="{{isPlaying}}" class="video" autoplay="true" src="{{videoUrl}}" id="video" controls objectFit="cover" bindfullscreenchange="bindfullscreenchange" show-center-play-btn="true" danmu-btn page-gesture="true" enable-progress-gesture="true"></video>
+
+<view class="back">返回</view>
+
+<view class="main-container">
+  <view class="top">
+    <view class="title">
+      <image class="pull-left type" src="/subpackages/images/type-draw.png"></image>
+      <view class="pull-left" style="margin:40rpx 0 0 20rpx;">
+        <cupComponent cup="3"></cupComponent>
+      </view>
+      <image class="bg" src="/subpackages/images/bg-top.png"></image>
+    </view>
+    <view class="result">
+      <image src="/subpackages/images/ye.png"></image>
+      <text>非常好，比上次有进步！</text>
+    </view>
+  </view>
+
+  <view class="box1">
+    <view class="box2">
+      <view class="box3 comment-box">
+        <!-- class=box里放主体内容 -->
+        <scroll-view scroll-y="true" class="box" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower">
+          <view wx:for="{{allList}}" wx:key="{{index}}" style="position:relative;z-index:9;">
+            <!-- <view style="color:white">sourceType:{{item.sourceType}}</view>
+            <view style="color:white">filesType:{{item.filesType}}</view> -->
+            <!-- <view style="color:white">{{item.sourceJson}}</view> -->
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==1&&item.filesType==11}}">
+              <replyTeacherVideoComponent bindplayvideo="playVideo" date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyTeacherVideoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==1&&item.filesType==10}}">
+              <replyTeacherAudioComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyTeacherAudioComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==1&&item.filesType==9}}">
+              <replyTeacherPhotoComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyTeacherPhotoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==1&&item.filesType==8}}">
+              <replyTeacherTxtComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" txt="{{item.value}}"></replyTeacherTxtComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==0&&item.filesType==11}}">
+              <replyStudentVideoComponent bindplayvideo="playVideo" date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyStudentVideoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==0&&item.filesType==10}}">
+              <replyStudentAudioComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" index="{{index}}" url="{{item.value}}"></replyStudentAudioComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==0&&item.filesType==9}}">
+              <replyStudentPhotoComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyStudentPhotoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.sourceType==0&&item.filesType==8}}">
+              <replyStudentTxtComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" txt="{{item.value}}"></replyStudentTxtComponent>
+            </view>
+
+            <!-- <view style="margin:20rpx;" wx:if="{{item.filesType==2}}">
+              <operationQuestionAudioComponent resourceUrl="{{filter.questionDetailValue(item.value)}}" audioWorkingId="ttt{{index}}"></operationQuestionAudioComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.filesType==1}}">
+              <operationQuestionPhotoComponent resourceUrl="{{filter.questionDetailValue(item.value)}}"></operationQuestionPhotoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.filesType==0}}">
+              <operationQuestionTxtComponent txt="{{filter.questionDetailValue(item.value)}}"></operationQuestionTxtComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.filesType==3}}">
+              <operationQuestionVideoComponent resourceUrl="{{filter.questionDetailValue(item.value)}}"></operationQuestionVideoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.filesType==7}}">
+              <operationAnswerAudioComponent resourceUrl="{{filter.questionDetailValue(item.value)}}" cannotDo="true" audioWorkingId="{{'aa'+index}}" score100="{{filter.questionDetailScore(item.value)}}">
+              </operationAnswerAudioComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.filesType==5}}">
+              <operationAnswerPhotoComponent cannotDo="true" resourceUrl="{{filter.questionDetailValue(item.value)}}"></operationAnswerPhotoComponent>
+            </view>
+
+            <view style="margin:20rpx;" wx:if="{{item.filesType==6}}">
+              <operationAnswerVideoComponent cannotDo="true" resourceUrl="{{filter.questionDetailValue(item.value)}}"></operationAnswerVideoComponent>
+            </view> -->
+
+          </view>
+
+          <view class="box">
+            <view style="margin:20rpx;">
+              <audioQuestionComponent resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></audioQuestionComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <photoQuestionComponent resourceUrl="http://www.vdouw.com/skin/vdouw/images/201404230035163516.jpg"></photoQuestionComponent>
+            </view>
+            <view style="margin:20rpx;">
+            </view>
+            <view style="margin:20rpx;">
+              <textQuestionComponent txt="张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序。"></textQuestionComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <videoQuestionComponent bindplayvideo="playVideo" resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400"></videoQuestionComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <audioAnswerComponent audioWorkingId="999" score100="0" readtxt="这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字，这是跟读文字。" resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></audioAnswerComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <audioAnswerComponent audioWorkingId="999" score100="99" resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></audioAnswerComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <drawAnswerComponent answerValue="http://www.vdouw.com/skin/vdouw/images/201404230035163516.jpg"></drawAnswerComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <photoAnswerComponent resourceUrl="/subpackages/images/temp3.jpg"></photoAnswerComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <textAnswerComponent txt="张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序。"></textAnswerComponent>
+            </view>
+            <view style="margin:20rpx;">
+              <videoAnswerComponent bindplayvideo="playVideo" resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400"></videoAnswerComponent>
+            </view>
+            <view style="height:100rpx;"></view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

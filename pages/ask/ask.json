@@ -1,0 +1,25 @@
+{
+  "usingComponents": {
+    "committedComponent": "/components/small/committed",
+    "questionAudioComponent": "/components/question/audio",
+    "questionTextComponent": "/components/question/text",
+    "questionPhotoComponent": "/components/question/photo",
+    "questionVideoComponent": "/components/question/video",
+    "answerAudioComponent": "/components/answer/audio",
+    "answerVideoComponent": "/components/answer/video",
+    "answerPhotoComponent": "/components/answer/photo",
+    "replyStudentAudioComponent": "/components/reply/student/audio",
+    "replyStudentPhotoComponent": "/components/reply/student/photo",
+    "replyStudentTxtComponent": "/components/reply/student/txt",
+    "replyStudentVideoComponent": "/components/reply/student/video",
+    "operationAnswerAudioComponent": "/components/operation/answer/audio/audio",
+    "operationAnswerPhotoComponent": "/components/operation/answer/photo/photo",
+    "operationAnswerTxtComponent": "/components/operation/answer/txt/txt",
+    "operationAnswerVideoComponent": "/components/operation/answer/video/video",
+    "operationQuestionAudioComponent": "/components/operation/question/audio/audio",
+    "operationQuestionPhotoComponent": "/components/operation/question/photo/photo",
+    "operationQuestionTxtComponent": "/components/operation/question/txt/txt",
+    "operationQuestionVideoComponent": "/components/operation/question/video/video"
+  },
+  "navigationBarTitleText": "发起提问"
+}

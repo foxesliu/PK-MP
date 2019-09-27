@@ -1,0 +1,19 @@
+<view class="giveup-shadowbox" wx:if="{{show}}">
+  <view class="bo">
+    <view class="top">
+      <view class="icon">
+        <text class="pkicon pkicon-ask-trash"></text>
+      </view>
+    </view>
+    <view class="bottom">
+      <view>
+        <text class="font36 font-bold" style="color:#ff7600;">是否</text>
+        <text class="font36 font-bold">删除此条</text>
+      </view>
+      <view class="btn-box">
+        <view bindtap="close">否</view>
+        <view class="yes" bindtap="sure">是</view>
+      </view>
+    </view>
+  </view>
+</view>

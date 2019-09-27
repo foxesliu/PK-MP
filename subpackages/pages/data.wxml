@@ -1,0 +1,108 @@
+
+
+    <view class="page-bg">
+      <image src="/subpackages/images/topic-bg.png"></image>
+    </view>
+
+    <leftComponent></leftComponent>
+
+    <image class="header" mode="widthFix" src="/subpackages/images/topic-top.png"></image>
+
+    <image class="left-text" src="/subpackages/images/topic-1.png"></image>
+
+    <view class="footer">
+      <image src="/subpackages/images/btn2.png"></image>
+    </view>
+
+    <video wx:if="{{isPlaying}}" class="video" autoplay="true" src="{{videoUrl}}" id="video" controls objectFit="cover" bindfullscreenchange="bindfullscreenchange" show-center-play-btn="true" danmu-btn page-gesture="true" enable-progress-gesture="true"></video>
+
+    <view class="main-container" wx:for="{{sections}}" wx:key="{{index}}" wx:if="{{mainContainerShowIndex==index}}">
+      <view class="top">
+        <view class="title">
+          <image class="pull-left type" wx:if="{{item.type=='0'}}" src="/subpackages/images/type-draw.png"></image>
+          <image class="pull-left type" wx:if="{{item.type=='1'}}" src="/subpackages/images/type-audio.png"></image>
+          <image class="pull-left type" wx:if="{{item.type=='2'}}" src="/subpackages/images/type-phone.png"></image>
+          <image class="pull-left type" wx:if="{{item.type=='3'}}" src="/subpackages/images/type-video.png"></image>
+          <view class="pull-left" style="margin:40rpx 0 0 20rpx;">
+            <cupComponent cup="{{item.score}}"></cupComponent>
+          </view>
+          <image class="bg" src="/subpackages/images/bg-top.png"></image>
+        </view>
+        <view class="result">
+          <image class="pull-left" wx:if="{{item.rOw==1}}" src="/subpackages/images/ye.png"></image>
+          <image class="pull-left" wx:if="{{item.rOw==2}}" src="/subpackages/images/ye2.png"></image>
+          <image class="pull-left" wx:if="{{item.rOw==0}}" src="/subpackages/images/ye3.png"></image>
+          <view class="text pull-left" wx:if="{{item.rOw!=-1}}">{{item.rOwText}}</view>
+          <view class="text pull-left" wx:if="{{item.rOw==-1}}">暂无得分</view>
+        </view>
+      </view>
+
+      <view class="box1">
+        <view class="box2">
+          <view class="box-shadow" wx:if="{{shadowShowed2!=0}}" bindtouchend="hideShadow">
+            <view class="v v1" wx:if="{{shadowShowed2==1}}">
+              <image class="shadow1" src="/subpackages/images/shadow1.png"></image>
+              <image class="shadow2 animated infinite bounce" src="/subpackages/images/shadow2.png"></image>
+            </view>
+            <view class="v v2" wx:if="{{shadowShowed2==2}}">
+              <image class="shadow3" src="/subpackages/images/shadow3.png"></image>
+              <image class="shadow4 animated bounce" src="/subpackages/images/shadow4.png"></image>
+            </view>
+          </view>
+          <view class="box3">
+            <!-- class=box里放主体内容 -->
+            <scroll-view scroll-y="true" class="box" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower">
+              <!-- 画图题开始 -->
+              <!-- <view>
+            <image class="draw-image" mode="widthFix" src="/subpackages/images/temp3.jpg"></image>
+            <image class="draw-image" mode="widthFix" src="/subpackages/images/temp3.jpg"></image>
+            <image class="draw-image" mode="widthFix" src="/subpackages/images/temp3.jpg"></image>
+          </view> -->
+              <!-- 画图题结束 -->
+              <!-- 数据题开始 -->
+              <view wx:for="{{item.contentVos}}" wx:key="{{idx}}">
+                <view class="lesson-page-question-container label mt-20">
+                  <view style="height:10rpx;"></view>
+                  <view class="left" wx:if="{{item.type==12}}">
+                    <drawAnswerComponent answerValue="http://www.vdouw.com/skin/vdouw/images/201404230035163516.jpg"></drawAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==7}}">
+                    <audioAnswerComponent audioWorkingId="999" score100="99" resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></audioAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==6}}">
+                    <videoAnswerComponent bindplayvideo="playVideo" resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400"></videoAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==5}}">
+                    <photoAnswerComponent resourceUrl="/subpackages/images/temp3.jpg"></photoAnswerComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==3}}">
+                    <videoQuestionComponent bindplayvideo="playVideo" resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400"></videoQuestionComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==2}}">
+                    <audioQuestionComponent resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></audioQuestionComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==1}}">
+                    <photoQuestionComponent resourceUrl="http://www.vdouw.com/skin/vdouw/images/201404230035163516.jpg"></photoQuestionComponent>
+                  </view>
+                  <view class="left" wx:if="{{item.type==0}}">
+                    <textQuestionComponent txt="张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序。"></textQuestionComponent>
+                  </view>
+                  <!-- <view class="left">
+                <textAnswerComponent txt="张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序，张三丰正在努力的做小程序。"></textAnswerComponent>
+              </view> -->
+
+                  <view class="right">
+                    <view>
+                      <labelComponent></labelComponent>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view style="height:20rpx;"></view>
+              <!-- 数据题结束 -->
+            </scroll-view>
+          </view>
+          <image class="bg" src="/subpackages/images/bg-bottom.png"></image>
+        </view>
+      </view>
+    </view>

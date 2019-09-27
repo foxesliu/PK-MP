@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "footerComponent": "/components/footerCenter/index",
+    "image-cropper": "/components/image-cropper/image-cropper"
+  },
+  "navigationBarTitleText": "个人中心",
+  "disableScroll": true
+}

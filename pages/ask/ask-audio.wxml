@@ -1,0 +1,18 @@
+<view class="committed-container">
+  <committedComponent active="{{committedActive}}" bindcommitted="submit"></committedComponent>
+</view>
+
+<view class="list">
+  <view class="item mt-20" wx:for="{{list}}" wx:key="{{index}}" bindlongpress="del" data-index="{{index}}">
+    <operationAnswerAudioComponent scoreHidden="true" audioWorkingId="{{index+777}}" resourceUrl="{{item}}" isCommit="true" replyIcon="true" cannotDo="true">
+    </operationAnswerAudioComponent>
+    <!-- <commitAudioComponent resourceUrl="{{item}}" did="{{index+44}}" isCommit="{{true}}"></commitAudioComponent> -->
+  </view>
+</view>
+
+<view class="commit-footer">
+  <operationAnswerAudioComponent audioWorkingId="avcd567" isCommit="true" replyIcon="true" bindrecordend="recordCallback">
+  </operationAnswerAudioComponent>
+</view>
+
+<modalLoadingComponent id="modalLoadingComponent" txt="录音上传中"></modalLoadingComponent>

@@ -1,0 +1,113 @@
+<button bindtap="start">开始录音</button>
+<button bindtap="end">停止录音</button>
+
+<button bindtap="startVideo">选择视频</button>
+
+<view style="margin:20rpx;">
+  <operationAnswerAudioComponent audioWorkingId="999" bindrecordend="recordCallback" readtxt="PHP is the best language">
+  </operationAnswerAudioComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerAudioComponent audioWorkingId="888" bindrecordend="recordCallback">
+  </operationAnswerAudioComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerAudioComponent audioWorkingId="777" isCommit="true" replyIcon="true" bindrecordend="recordCallback">
+  </operationAnswerAudioComponent>
+</view>
+<!-- 必传参数 audioWorkingId -->
+<!-- 非必传参数 readtxt resourceUrl replyIcon cannotDo scoreHidden isCommit -->
+<!-- bindrecordend="recordCallback" -->
+<modalLoadingComponent id="modalLoadingComponent" txt="录音上传中"></modalLoadingComponent>
+
+<view style="margin:20rpx;">
+  <operationAnswerPhotoComponent binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerPhotoComponent cannotDo="true" resourceUrl="https://files.proudkids.cn/proudkids-ems/20190329/fa0ea22e13344182a8f466aab86151cc.jpg" binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerPhotoComponent isCommit="true" replyIcon="true" resourceUrl="https://files.proudkids.cn/proudkids-ems/20190329/fa0ea22e13344182a8f466aab86151cc.jpg" binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+</view>
+<!-- 非必传参数 resourceUrl cannotDo -->
+<!-- binduploadcomplete="uploadImageCallback" -->
+
+<view style="margin:20rpx;">
+  <operationAnswerVideoComponent binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerVideoComponent cannotDo="true" resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerVideoComponent isCommit="true" replyIcon="true" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationAnswerVideoComponent cannotDo="true" isCommit="true" replyIcon="true" resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+</view>
+<!-- 非必传参数 resourceUrl cannotDo -->
+<!-- binduploadcomplete="uploadVideoCallback" -->
+
+<view style="margin:20rpx">
+  <operationAnswerTxtComponent bindinputComplete="txtInputComplete"></operationAnswerTxtComponent>
+</view>
+<!-- 非必传参数 txt cannotDo isCommit -->
+<!-- bindinputComplete="txtInputComplete" -->
+
+
+
+<view style="margin:20rpx;">
+  <operationQuestionAudioComponent audioWorkingId="ttt56" resourceUrl="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></operationQuestionAudioComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationQuestionAudioComponent cannotDo="true" resourceUrl="https://files.proudkids.cn/default/aud080.mp3" audioWorkingId="ttt57"></operationQuestionAudioComponent>
+</view>
+<!-- 必传参数 audioWorkingId resourceUrl -->
+<!-- 非必传参数 cannotDo  -->
+
+<view style="margin:20rpx;">
+  <operationQuestionPhotoComponent resourceUrl="/public/images/home/home-bottom-bg.png"></operationQuestionPhotoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationQuestionPhotoComponent resourceUrl="/public/images/temp.jpg"></operationQuestionPhotoComponent>
+</view>
+
+<view style="margin:20rpx;">
+  <operationQuestionTxtComponent txt="网站ICP备案与签约主体不一致，请修改网址。;已提交的营业执照和主体不一致，请提供和主体一致的营业执照。"></operationQuestionTxtComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationQuestionTxtComponent txt="网站ICP备案与签约主体不一致，请修改网址。;已提交的营业执照和主体不一致，请提供和主体一致的营业执照。网站ICP备案与签约主体不一致，请修改网址。;已提交的营业执照和主体不一致，请提供和主体一致的营业执照。网站ICP备案与签约主体不一致，请修改网址。;已提交的营业执照和主体不一致，请提供和主体一致的营业执照。"></operationQuestionTxtComponent>
+</view>
+
+<view style="margin:20rpx;">
+  <operationQuestionVideoComponent resourceUrl="https://files.proudkids.cn/video/poster_winter.mp4"></operationQuestionVideoComponent>
+</view>
+<view style="margin:20rpx;">
+  <operationQuestionVideoComponent resourceUrl="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400"></operationQuestionVideoComponent>
+</view>
+
+
+
+
+
+
+<testAudioComponent></testAudioComponent>
+<testAudioComponent></testAudioComponent>
+<testAudioComponent></testAudioComponent>
+
+<view style="font-size:50rpx;" bindtap="del">调用删除组件</view>
+<delComponent id="delComponent" binddelCallback="delCallback"></delComponent>
+
+<view style="font-size:50rpx;" bindtap="quit">调用退出组件</view>
+<quitComponent id="quitComponent" bindquitcallback="quitcallback"></quitComponent>
+
+<view style="font-size:50rpx;" bindtap="giveup">调用“放弃本次修改”组件</view>
+<giveupComponent id="giveupComponent" bindgiveupcallback="giveupcallback"></giveupComponent>
+
+<view style="font-size:40rpx;" bindtap="toast11">调用“已还原到本次开始作答的状态”组件</view>
+<toastComponent id="toastComponent" txt="已还原到本次开始作答的状态"></toastComponent>
+
+<view style="font-size:40rpx;" bindtap="toast22">调用“重置密码成功”组件</view>
+<toastComponent id="toastComponent22" stat="right" txt="重置密码成功将返回登录页面"></toastComponent>
+
+<view style="font-size:40rpx;" bindtap="toast33">调用“重置密码失败”组件</view>
+<toastComponent id="toastComponent33" stat="wrong" txt="重置密码失败请重试"></toastComponent>

@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cupComponent": "/subpackages/components/cup",
+    "leftComponent": "/subpackages/components/left",
+    "audioAnswerComponent": "/subpackages/components/dowork-answer/audio",
+    "drawAnswerComponent": "/subpackages/components/dowork-answer/draw",
+    "photoAnswerComponent": "/subpackages/components/dowork-answer/photo",
+    "textAnswerComponent": "/subpackages/components/dowork-answer/text",
+    "videoAnswerComponent": "/subpackages/components/dowork-answer/video",
+    "audioQuestionComponent": "/subpackages/components/dowork-question/audio",
+    "photoQuestionComponent": "/subpackages/components/dowork-question/photo",
+    "textQuestionComponent": "/subpackages/components/dowork-question/text",
+    "videoQuestionComponent": "/subpackages/components/dowork-question/video",
+    "labelComponent": "/subpackages/components/label",
+    "commentComponent": "/subpackages/components/comment/comment"
+  }
+}

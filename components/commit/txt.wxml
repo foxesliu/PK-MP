@@ -1,0 +1,27 @@
+<view wx:if="{{!txt}}" class="audio-container">
+  <view class="box">
+    <view class="left">
+      <view class="pkicon pkicon-ask-reply" style="font-size:55rpx"></view>
+    </view>
+    <view class="middle">
+      <input class="commit-txt-input" value="{{value}}" bindinput="input"></input>
+    </view>
+    <view class="right" bindtap="submit">
+      <view class="right-box font26 font-bold">发送</view>
+    </view>
+    <view class="bg">
+      <image src="/public/images/ask/bg.png"></image>
+    </view>
+  </view>
+</view>
+
+<view class="audio-container" wx:if="{{txt}}">
+  <view class="box" style="background:#91e224;min-height:133rpx;height:auto">
+    <view class="left">
+      <view class="pkicon pkicon-ask-reply" style="font-size:55rpx"></view>
+    </view>
+    <view class="middle" style="margin-right:0;">
+      <view class="commit-txt-txt">{{txt}}</view>
+    </view>
+  </view>
+</view>

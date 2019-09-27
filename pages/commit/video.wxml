@@ -1,0 +1,13 @@
+<view class="committed-container">
+  <committedComponent active="{{committedActive}}" bindcommitted="submit"></committedComponent>
+</view>
+
+<view class="list">
+  <view class="item mt-20" wx:for="{{list}}" wx:key="{{index}}" bindlongpress="del" data-index="{{index}}">
+    <operationAnswerVideoComponent replyIcon="true" resourceUrl="{{item}}" did="{{index+55}}" isCommit="true"></operationAnswerVideoComponent>
+  </view>
+</view>
+
+<view class="commit-footer">
+  <operationAnswerVideoComponent replyIcon="true" isCommit="true" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+</view>

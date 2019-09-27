@@ -1,0 +1,6 @@
+@import './photo.wxss';
+
+.imi {
+  width: 58rpx;
+  height: 60rpx;
+}

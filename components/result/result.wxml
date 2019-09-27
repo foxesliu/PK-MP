@@ -1,0 +1,28 @@
+<view wx:if="{{isShow&&rightOrWrongIsShow}}">
+  <view class="box" wx:if="{{score=='1'}}">
+    <image class="image" src="/public/images/wdata/wdata-result-right.png"></image>
+    <view class="text">{{txt}}</view>
+  </view>
+
+  <view class="box" wx:if="{{score=='2'}}">
+    <image class="image" src="/public/images/wdata/wdata-result-half.png"></image>
+    <view class="text">{{txt}}</view>
+  </view>
+
+  <view class="box" wx:if="{{score=='0'}}">
+    <image class="image" src="/public/images/wdata/wdata-result-wrong.png"></image>
+    <view class="text">{{txt}}</view>
+  </view>
+</view>
+
+<view class="btn btn-left" bindtap="changeRightOrWrongIsShow" bindtouchmove="bindtouchmove" style="left:{{left}}px;top:{{top}}px;">
+  <view wx:if="{{rightOrWrongIsShow}}" class="pkicon3 pkicon3-wdata-eye-show font40"></view>
+  <view wx:if="{{!rightOrWrongIsShow}}" style="position:relative;top:10rpx;font-size:28rpx;" class="pkicon3 pkicon3-wdata-eye-hide"></view>
+  <view class="txt ml-10 font28">{{rightOrWrongIsShow?'隐藏正误':'显示正误'}}</view>
+</view>
+
+<view class="btn btn-right" bindtap="changeLabelShow" bindtouchmove="bindtouchmove2" style="left:{{left2}}px;top:{{top2}}px;">
+  <view wx:if="{{labelIsShow}}" class="pkicon3 pkicon3-wdata-eye-show font40"></view>
+  <view wx:if="{{!labelIsShow}}" style="position:relative;top:10rpx;font-size:28rpx;" class="pkicon3 pkicon3-wdata-eye-hide"></view>
+  <view class="txt ml-10 font28">{{labelIsShow?'隐藏标注':'显示标注'}}</view>
+</view>

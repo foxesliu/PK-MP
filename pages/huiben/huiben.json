@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "footerComponent": "/components/footerCenter/index"
+  },
+  "navigationBarTitleText": "绘本馆"
+}

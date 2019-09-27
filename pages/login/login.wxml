@@ -1,0 +1,63 @@
+<view class='main-container' wx:if="{{!isIPad}}">
+  <view class='container'>
+    <view class='title-box'>
+      <image class='top-img' src="/public/images/login/login.png"></image>
+    </view>
+    <view class='phone-box-out'>
+      <view class='phone-box flex-box {{isFocus==1 ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-phone"></text>
+        <input class='phone' type='number' placeholder='输入手机号码' maxlength="11" data-index="1" bindinput="bindKeyInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='errorTip' hidden="{{isPhone}}">请您输入正确的手机号码</view>
+    </view>
+    <view class='verify-box-out'>
+      <view class='verify-box flex-box {{isFocus==2 ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-password"></text>
+        <input class="verify-txt" placeholder='输入密码' password data-index="2" bindfocus="focus" bindblur="no_focus" bindinput="passWord" maxlength="18"></input>
+      </view>
+      <view class='errorTip' hidden="{{isPw}}">密码错误</view>
+    </view>
+    <view class='next-box' bindtap='login'>
+      <button class='next'>登录</button>
+    </view>
+    <view class='resetPw'>
+      <text bindtap='goReset'>重置密码</text>
+    </view>
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/bottom-bg.png'></image>
+  </view>
+</view>
+<view wx:if="{{isIPad}}" class='ipad-container'>
+  <view class='container'>
+    <view class='ipad-title-box'>
+      <image class='top-img' src="/public/images/login/ipad-login.png"></image>
+    </view>
+    <view class='ipad-phone-box-out'>
+      <view class='ipad-phone-box flex-box {{isFocus==1 ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-phone"></text>
+        <input class='phone' type='number' placeholder='输入手机号码' maxlength="11" data-index="1" bindinput="bindKeyInput" bindfocus="focus" bindblur="no_focus"></input>
+      </view>
+      <view class='ipad-errorTip' hidden="{{isPhone}}">请您输入正确的手机号码</view>
+    </view>
+    <view class='ipad-phone-box-out mt30'>
+      <view class='ipad-phone-box flex-box {{isFocus==2 ? "activeBor" : ""}}'>
+        <text class="pkicon pkicon-login-password"></text>
+        <input class="phone" placeholder='输入密码' password data-index="2" bindfocus="focus" bindblur="no_focus" bindinput="passWord" maxlength="18"></input>
+      </view>
+      <view class='ipad-errorTip' hidden="{{isPw}}">密码错误</view>
+    </view>
+    <view class='ipad-next-box' bindtap='login'>
+      <button class='next'>登录</button>
+    </view>
+    <view class='ipad-resetPw'>
+      <text bindtap='goReset'>重置密码</text>
+    </view>
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/ipad-bottom-bg.png'></image>
+  </view>
+</view>
+<!-- <button size="mini" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">确定要登录吗？</button>
+
+<view style="word-break:break-all;">{{dat}}</view> -->

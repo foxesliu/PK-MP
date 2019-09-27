@@ -1,0 +1,49 @@
+<view class="lesson">
+  <view class="bg" style="{{isAsk?'box-shadow:none':''}}">
+    <image wx:if="{{item.type=='0'}}" class="image" src="/public/images/lesson/dowork-draw.png"></image>
+    <image wx:if="{{item.type=='1'}}" class="image" src="/public/images/lesson/dowork-audio.png"></image>
+    <image wx:if="{{item.type=='2'}}" class="image" src="/public/images/lesson/dowork-phone.png"></image>
+    <image wx:if="{{item.type=='3'}}" class="image" src="/public/images/lesson/dowork-video.png"></image>
+    <view class="info">
+      <view class="number-index" style="font-size:48rpx;">{{thisIndex}}</view>
+      <view wx:if="{{item.type=='0'}}" class="title">画图题</view>
+      <view wx:if="{{item.type=='1'}}" class="title">语音题</view>
+      <view wx:if="{{item.type=='2'}}" class="title">拍照题</view>
+      <view wx:if="{{item.type=='3'}}" class="title">视频题</view>
+      <view class="cup" wx:if="{{item.score!=null&&item.score!=-1}}">
+        <cupComponent cup="{{item.score}}"></cupComponent>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="btn" wx:if="{{!isAsk}}">
+      <view class="start" wx:if="{{item.stat==0}}">开始答题</view>
+      <view wx:if="{{item.stat==1}}">答题完成</view>
+      <view class="not" wx:if="{{item.stat==2}}">
+        <text class="text pull-left">未批改</text>
+        <text class="pkicon pkicon-lesson-not font48 color-white"></text>
+      </view>
+      <!-- <view wx:if="{{item.stat==3&&rightOrWrong==-1}}">老师未批改</view> -->
+      <view class="wrong" wx:if="{{item.stat==3&&rightOrWrong==0}}">
+        <text class="text pull-left">已批改</text>
+        <image src="/public/images/lesson/wrong.png"></image>
+        <!-- <text class="pkicon pkicon-lesson-wrong font48 color-white"></text> -->
+      </view>
+      <view class="right" wx:if="{{item.stat==3&&rightOrWrong==1}}">
+        <text class="text pull-left">已批改</text>
+        <text class="pkicon pkicon-lesson-right font48 color-white"></text>
+      </view>
+      <view class="half" wx:if="{{item.stat==3&&rightOrWrong==2}}">
+        <text class="text pull-left">已批改</text>
+        <text class="pkicon pkicon-lesson-half font48 color-white"></text>
+      </view>
+    </view>
+    <view class="btn" wx:if="{{isAsk}}">
+      <view class="wrong">
+        <text class="text pull-left">发起提问</text>
+        <image class="btn-ask-image" src="/public/images/lesson/ask.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

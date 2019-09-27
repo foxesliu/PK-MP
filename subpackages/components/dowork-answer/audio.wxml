@@ -1,0 +1,52 @@
+<wxs module="filter" src="../../../public/js/filter.wxs"></wxs>
+
+<view class="audio-container">
+  <view class="box">
+    <view class="left">
+      <view class="pkicon pkicon-wdata-w-ask"></view>
+    </view>
+    <view class="middle" wx:if="{{step==3}}">
+      <view class="pull-left score">
+        <image wx:if="{{score}}" src="{{'/public/images/score/'+filter.scoreToLetter(score)+'.png'}}"></image>
+      </view>
+      <view class="mt-5 pull-left" hidden="{{url&&open}}">
+        <view class="pull-left second ml-10" wx:if="{{!duration}}">{{durationShow}}</view>
+        <view class="pull-left second ml-10" wx:if="{{duration}}">{{durationShow}}''</view>
+      </view>
+    </view>
+    <view class="middle step4" wx:if="{{step==4}}">
+      <view class="mt-5 pull-left view">
+        <view class="pull-left pkicon pkicon-wdata-sound ml-10"></view>
+        <view class="pull-left second ml-10">{{playingShowSecond}}''</view>
+      </view>
+      <view class="progress" style="left:-{{playingLeft}}%"></view>
+    </view>
+
+    <view class="right" bindtap="record">
+      <view class="right-box" wx:if="{{step==3}}">
+        <view class="pkicon pkicon-wdata-icon-right">
+          <text class="path1"></text>
+        </view>
+      </view>
+      <view class="right-box" wx:if="{{step==4}}">
+        <view class="pkicon pkicon-wdraw-pause">
+          <text class="path1"></text>
+        </view>
+      </view>
+    </view>
+    <view class="bg">
+      <image src="/public/images/ask/bg.png"></image>
+    </view>
+  </view>
+
+  <view class="shape" wx:if="{{readtxt}}">
+    <view class="t">
+      <text>请跟读以下内容</text>
+      <view class="pkicon pkicon-wdata-right-arrow"></view>
+    </view>
+    <text class="c">{{readtxt}}</text>
+  </view>
+</view>
+
+<modalRedoComponent id="modalRedoComponent"></modalRedoComponent>
+<modalLoadingComponent id="modalLoadingComponent" txt="语音上传中" kd="语音技术由科大讯飞支持"></modalLoadingComponent>

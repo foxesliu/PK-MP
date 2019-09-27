@@ -1,0 +1,2 @@
+<!--pages/test2/index.wxml-->
+<test2 type="{{type}}" isRead="{{isRead}}" ></test2>

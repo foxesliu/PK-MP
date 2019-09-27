@@ -1,0 +1,59 @@
+<view class="page-bg">
+  <image src="/subpackages/images/topic-bg.png"></image>
+</view>
+
+<leftComponent></leftComponent>
+
+<image class="header" mode="widthFix" src="/subpackages/images/topic-top.png"></image>
+
+<image class="left-text" src="/subpackages/images/topic-1.png"></image>
+
+<view class="footer">
+  <image src="/subpackages/images/btn2.png"></image>
+</view>
+
+<view class="main-container">
+  <view class="top">
+    <view class="title">
+      <image class="pull-left type" src="/subpackages/images/type-draw.png"></image>
+      <view class="pull-left" style="margin:40rpx 0 0 20rpx;">
+        <cupComponent cup="3"></cupComponent>
+      </view>
+      <image class="bg" src="/subpackages/images/bg-top.png"></image>
+    </view>
+    <view class="result">
+      <image class="pull-left" src="/subpackages/images/ye.png"></image>
+      <!-- <image class="pull-left" src="/subpackages/images/ye.png"></image> -->
+      <!-- <image class="pull-left" src="/subpackages/images/ye.png"></image> -->
+      <view class="text pull-left">非常好，比上次有进步！</view>
+    </view>
+  </view>
+
+  <view class="box1">
+    <view class="box2">
+      <view class="box-shadow" wx:if="{{shadowShowed!=0}}" bindtouchend="hideShadow">
+        <view class="v v1" wx:if="{{shadowShowed==1}}">
+          <image class="shadow1" src="/subpackages/images/shadow1.png"></image>
+          <image class="shadow2 animated infinite bounce" src="/subpackages/images/shadow2.png"></image>
+        </view>
+        <view class="v v2" wx:if="{{shadowShowed==2}}">
+          <image class="shadow3" src="/subpackages/images/shadow3.png"></image>
+          <image class="shadow4 animated bounce" src="/subpackages/images/shadow4.png"></image>
+        </view>
+      </view>
+      <view class="box3">
+        <!-- class=box里放主体内容 -->
+        <scroll-view scroll-y="true" class="box" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower">
+          <!-- 画图题开始 -->
+          <view>
+            <image class="draw-image" mode="widthFix" src="/subpackages/images/temp3.jpg"></image>
+            <image class="draw-image" mode="widthFix" src="/subpackages/images/temp3.jpg"></image>
+            <image class="draw-image" mode="widthFix" src="/subpackages/images/temp3.jpg"></image>
+          </view>
+          <!-- 画图题结束 -->
+        </scroll-view>
+      </view>
+      <image class="bg" src="/subpackages/images/bg-bottom.png"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,58 @@
+<wxs module="filter" src="../../public/js/filter.wxs"></wxs>
+
+<view class="tab">
+  <view class="v {{tabActive==0?'active':''}}" bindtap="clickTab" data-id="0">
+    <text class="text">未读</text>
+    <text class="span" wx:if="{{newList.length}}">{{newList.length}}</text>
+  </view>
+  <view class="v {{tabActive==1?'active':''}}" bindtap="clickTab" data-id="1">
+    <text class="text">已读</text>
+  </view>
+</view>
+
+<view class="new-list" wx:if="{{tabActive==0}}">
+  <view wx:if="{{newList.length}}" data-stat="0" class="item" wx:for="{{newList}}" wx:key="index" bindtap="gotoPage" data-item="{{item}}">
+    <view class="time">{{filter.formatDate(item.qaTime)}}</view>
+    <view class="box">
+      <view class="left">
+        <view class="x" style="background:#84c908;box-shadow: 0px 4rpx 0px 0px #76b308;">提问{{item.index}}</view>
+        <view class="y">页面{{item.pageNum}}</view>
+      </view>
+      <view class="middle">
+        <image class="pull-left" src="{{filter.getOriginatorAvatarUrl(item)}}"></image>
+        <view class="pull-left ml-10 view">
+          <view class="color-4f font30">{{(filter.getOriginatorNickName(item))}}</view>
+          <view class="color-c4 font24">{{(filter.getOriginatorInfo(item))}}</view>
+        </view>
+      </view>
+      <view class="right font26">查看</view>
+    </view>
+  </view>
+  <view wx:if="{{newList.length==0}}">
+    <nodataComponent image="/public/images/ask/ask-new.png" txt="暂时没有未读提问回复哦"></nodataComponent>
+  </view>
+</view>
+
+<view class="new-list list" wx:if="{{tabActive==1}}">
+  <view wx:if="{{list.length}}" class="item" data-stat="1" wx:for="{{list}}" wx:key="index" bindtap="gotoPage" data-item="{{item}}">
+    <!-- <view class="time">{{item.qaTime}}</view> -->
+    <view class="box">
+      <view class="left">
+        <view class="x" style="background:#84c908;box-shadow: 0px 4rpx 0px 0px #76b308;">提问{{item.index}}</view>
+        <view class="y">页面{{item.pageNum}}</view>
+      </view>
+      <view class="middle">
+        <image class="pull-left" src="{{filter.getOriginatorAvatarUrl(item)}}"></image>
+        <view class="pull-left ml-10 view">
+          <view class="color-4f font30">{{(filter.getOriginatorNickName(item))}}</view>
+          <view class="color-c4 font24">{{(filter.getOriginatorInfo(item))}}</view>
+        </view>
+      </view>
+      <view class="right font26"><view>查看</view></view>
+    </view>
+    <view class="reply-time">回复时间：{{filter.formatDate(item.replayTime)}}</view>
+  </view>
+  <view wx:if="{{list.length==0}}">
+    <nodataComponent image="/public/images/ask/ask-all.png" txt="暂时没有任何提问回复哦"></nodataComponent>
+  </view>
+</view>

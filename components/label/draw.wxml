@@ -1,0 +1,5 @@
+<view class="label-container" wx:if="{{labelShow}}">
+  <view class="item" wx:for="{{list}}" wx:key="{{index}}" style="left:{{xOffset*item.x}}rpx;top:{{yOffset*item.y}}rpx;" bindtap="gotoDetail" data-item="{{item}}">
+    <labelComponent item="{{item}}" it="{{item}}"></labelComponent>
+  </view>
+</view>

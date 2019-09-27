@@ -1,0 +1,47 @@
+@import './audio.wxss';
+
+.video-box.answer-component-video {
+  background: #9ceb32;
+}
+
+.video-box.answer-component-video {
+  position: relative;
+}
+
+.video-box.answer-component-video .left {
+  width: 56rpx;
+  min-height: 104rpx;
+  height: auto;
+  background-color: #589506;
+  box-shadow: inset 0px 1rpx 13rpx 0px #365d00;
+  border-radius: 29rpx;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.record-again {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  width: 169rpx;
+  height: 50rpx;
+  background-color: #5ca900;
+  box-shadow: inset -4rpx 0px 3rpx 0px rgba(0, 0, 0, 0.21);
+  border-radius: 10rpx;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-again .pkicon-wdraw-cancel {
+  color: white !important;
+  font-size: 28rpx !important;
+}

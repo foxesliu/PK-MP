@@ -1,0 +1,9 @@
+<view class="video-box">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-question"></view>
+  </view>
+  <view class="mid">
+    <image wx:if="{{!isPlaying}}" bindtap="playVideo" data-index="{{index}}" mode="center" src="/public/images/wdata/video-default.jpg"></image>
+    <video wx:if="{{isPlaying}}" poster="{{videoPoster}}" id="video{{index}}" src="{{item.url}}" autoplay="true" controls objectFit="cover" show-center-play-btn="true" danmu-btn page-gesture="true" enable-progress-gesture="true"></video>
+  </view>
+</view>

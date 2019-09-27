@@ -1,0 +1,135 @@
+/* pages/share/result.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background: #fde214;
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.relative{
+  position: relative;
+}
+
+.teacher-info{
+  width: 750rpx;
+	height: 241rpx;
+	background-color: #ffffff;
+	box-shadow: 1rpx 4rpx 10rpx 0px 
+		rgba(255, 129, 0, 0.16);
+}
+.thead{
+  width: 98rpx;
+	height: 98rpx;
+  border-radius: 50%;
+  background: rebeccapurple;
+  overflow: hidden;
+}
+.thead image{
+  height: 100%;
+}
+.teacher-type{
+  position: absolute;
+  right: -3rpx;
+  bottom: -6rpx;
+  width: 54rpx;
+	height: 28rpx;
+  font-size: 20rpx;
+  background-image: linear-gradient(137deg, 
+		#ff9100 0%, 
+		#f76b1c 100%);
+	box-shadow: 0px 2rpx 0px 0px 
+		#c54d00;
+	border-radius: 8rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.teacher-info .left-box{
+  margin-left: 37rpx;
+}
+
+.comment{
+  display: inline-block;
+  color: #666666;
+  font-size: 22rpx;
+  text-decoration: underline;
+  margin-top: 10rpx;
+}
+.right-box{
+  margin-left: 26rpx;
+}
+.teacher-info .right-box .txt{
+  width: 569rpx;
+  height: 152rpx;
+  background-color: #fff200;
+	box-shadow: 0px 7rpx 0px 0px 
+		#ffc900;
+  border-radius: 8rpx;
+  padding: 15rpx 0 14rpx 14rpx;
+}
+.teacher-info .right-box .txt text{
+  font-size: 28rpx;
+  color: #313131;
+  line-height: 1.5;
+}
+.stname{
+  
+}
+.texticon1,.texticon2{
+  display: inline-block;
+  transform:rotate(180deg);
+  position: absolute;
+}
+.texticon1{
+  left: -20rpx;
+  top: 72rpx;
+  color: #fff200;
+  z-index: 5;
+}
+.texticon2{
+  left: -20rpx;
+  top: 80rpx;
+  color: #ffc900;
+}
+.txt1{
+  margin-top: 18rpx;
+  font-size: 24rpx;
+  color: #9a9a9a;
+  padding-left: 14rpx;
+}
+.bottom-box{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.bottom-box .relative image{
+  width: 100%;
+  height: 118rpx;
+  display: block;
+}
+.bottom-box .relative text{
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 6;
+  color: #ffffff;
+  text-align: center;
+  line-height: 118rpx;
+  font-size: 36rpx;
+}
+.list {
+  padding-top: 30rpx;
+  overflow: hidden;
+  padding-bottom: 110rpx;
+}
+
+.list .item {
+  float: left;
+}
+
+.list .item:nth-child(2n+1) {
+  margin: 0 20rpx;
+}

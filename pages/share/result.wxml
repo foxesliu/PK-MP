@@ -1,0 +1,47 @@
+<view>
+  <view>
+    <view class='teacher-info flex-box'>
+      <view class='left-box'>
+        <view class='relative'>
+          <view class='thead'>
+            <image src="{{teacherHeadUrl}}"></image>
+          </view>
+          <text class='teacher-type'>中教</text>
+        </view>
+        <!-- <text class='comment' bindtap='goBack'>查看评价</text> -->
+      </view>
+      <view class='right-box'>
+        <view>
+          <view class='relative'>
+            <text class='pkicon pkicon-wdata-right-arrow texticon1'></text>
+            <text class='pkicon pkicon-wdata-right-arrow texticon2'></text>
+          </view>
+          <view class='txt'>
+            <view><text class='stname' style='color: #4f8701;'>{{ruserName}}</text> 用时 <text>{{des.hour}}</text> 小时 <text>{{des.min}}</text> 分钟 <text>{{des.second}}</text> 秒完成作答
+            </view>
+          <view>正确率 <text>{{des.percent}}</text> ,获得了 <text>{{des.trophies}} 个奖杯。</text> </view>
+          <view>欢迎您检查下孩子的作业。</view>
+          </view>
+        </view>
+        <view class='txt1'>感兴趣的话，让你家宝贝和 {{ruserName}} 一起学习吧</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="list">
+      <view class="item" wx:for="{{list}}" wx:key="index">
+        <view data-type="{{item.type}}" data-id="{{index+1}}"  bindtap='toDetail' data-stat="{{item}}">
+          <lessonComponent item="{{item}}" index="{{index}}" isAsk="{{isAsk}}"></lessonComponent>
+          
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='bottom-box'>
+    <view class='relative'>
+      <image src='/public/images/share/share-green-bg.png'></image>
+      <text bindtap='goApply'>报名一起学</text>
+    </view>
+  </view>
+</view>

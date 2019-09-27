@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "labelComponent": "/components/label/label"
+  }
+}

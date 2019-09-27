@@ -1,0 +1,14 @@
+<view class="video-box">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-question" style="font-size:40rpx;"></view>
+  </view>
+  <view class="mid">
+    <view class="video-btn" bindtap="playVideo">
+      <view class="btn">
+        <image src="/public/images/wdata/video-btn.png"></image>
+        <text class="color-white">播放</text>
+      </view>
+      <image class="bg" src="/public/images/wdata/video-default.png"></image>
+    </view>
+  </view>
+</view>

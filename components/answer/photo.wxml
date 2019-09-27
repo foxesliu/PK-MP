@@ -1,0 +1,34 @@
+<view class="box" wx:if="{{!url}}">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-ask"></view>
+  </view>
+  <view class="middle">
+    <text class="pkicon2 pkicon2-wdata-upload-image ml-10">
+      <text class="path1"></text>
+    </text>
+    <text class="video-txt">请上传图片</text>
+  </view>
+  <view class="right">
+    <view class="right-box" bindtap="upload">
+      <view class="pkicon2 pkicon2-wdata-photo">
+        <text class="path1"></text>
+      </view>
+    </view>
+  </view>
+  <view class="bg">
+    <image src="/public/images/ask/bg.png"></image>
+  </view>
+</view>
+
+<view style="height:auto" class="box answer-component-video answer-component-photo" wx:if="{{url}}">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-ask"></view>
+  </view>
+  <view class="mid">
+    <image mode="widthFix" src="{{url}}"></image>
+    <view class="pull-right record-again" wx:if="{{!resourceUrl}}" bindtap="clickUploadAgain">
+      <text class="pkicon pkicon-wdraw-cancel"></text>
+      <text class="color-white font26 ml-10">重新上传</text>
+    </view>
+  </view>
+</view>

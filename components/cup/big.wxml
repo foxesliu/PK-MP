@@ -1,0 +1,3 @@
+<view class="bigcup-box">
+  <image wx:for="{{stars}}" wx:key="index" class="cup {{size?'big':''}}" src="{{cup>index?'/public/images/lesson/cup-active.png':'/public/images/lesson/cup.png'}}"></image>
+</view>

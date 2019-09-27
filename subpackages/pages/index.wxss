@@ -1,0 +1,434 @@
+/* subPackages/pages/index.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+image {
+  display: block;
+  position: absolute;
+}
+
+.bg-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.top-box {
+  top: 0;
+  width: 100%;
+  height: 313rpx;
+}
+
+.logo {
+  width: 173rpx;
+  height: 33rpx;
+  top: 33rpx;
+  left: 26rpx;
+}
+
+.text-box {
+  text-align: right;
+  padding-right: 34rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.sptext {
+  display: inline-block;
+  width: 78rpx;
+  line-height: 37rpx;
+  background-color: #ffba27;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-right: 14rpx;
+}
+
+.title {
+  margin-top: 49rpx;
+}
+
+@keyframes btmtxtmove {
+  0% {
+    left: 750rpx;
+  }
+
+  50% {
+    left: -65rpx;
+  }
+
+  70% {
+    left: 65rpx;
+  }
+
+  80% {
+    left: 55rpx;
+  }
+
+  90% {
+    left: 65rpx;
+  }
+
+  95% {
+    left: 60rpx;
+  }
+
+  100% {
+    left: 65rpx;
+  }
+}
+
+.btmtxt {
+  width: 630rpx;
+  height: 108rpx;
+  top: 90rpx;
+  z-index: 2;
+  animation: btmtxtmove 1s linear;
+  animation-delay: 1s;
+  left: 750rpx;
+}
+
+.activel {
+  left: 65rpx;
+}
+
+@keyframes toptxtmove {
+  0% {
+    left: -644rpx;
+  }
+
+  50% {
+    left: 114rpx;
+  }
+
+  70% {
+    left: 104rpx;
+  }
+
+  80% {
+    left: 114rpx;
+  }
+
+  90% {
+    left: 110rpx;
+  }
+
+  100% {
+    left: 114rpx;
+  }
+}
+
+.toptxt {
+  width: 530rpx;
+  height: 90rpx;
+  left: 114rpx;
+  animation: toptxtmove 1s linear;
+}
+
+@keyframes txtimgmove
+{
+0%   {top: 50rpx;}
+50%  {top: 50rpx;}
+70%  {top: 27rpx;}
+80%  {top: 40rpx;}
+90%  {top: 27rpx;}
+95%  {top: 35rpx;}
+100% {top: 27rpx;}
+}
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    /* -webkit-transform: translate3d(0, 200rpx, 0); */
+    transform: translate3d(0, 80rpx, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20rpx, 0);
+    transform: translate3d(0, -20rpx, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10rpx, 0);
+    transform: translate3d(0, 10rpx, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5rpx, 0);
+    transform: translate3d(0, -5rpx, 0);
+  }
+
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+.txt-img {
+  width: 113rpx;
+  height: 120rpx;
+  /* top: 27rpx; */
+  opacity: 0;
+  right: 15rpx;
+  z-index: 1;
+  
+}
+.activet{
+  top: 27rpx;
+  opacity: 1;
+  animation: bounceInUp 1s linear;
+}
+.bottom-bg {
+  width: 100%;
+  height: 388rpx;
+  z-index: 2;
+}
+
+.btm-box {
+  bottom: 0;
+  width: 100%;
+  height: 388rpx;
+}
+
+.group1 {
+  right: 153rpx;
+  width: 110rpx;
+  height: 111rpx;
+}
+
+.group1-box {
+  height: 111rpx;
+  width: 110rpx;
+  z-index: 2;
+}
+
+.mt1 {
+  width: 66rpx;
+  height: 56rpx;
+  left: 20rpx;
+  bottom: 5rpx;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mt {
+  top: 4rpx;
+  width: 96rpx;
+  height: 96rpx;
+  left: 6rpx;
+  animation: rotation 8s linear infinite;
+}
+@keyframes bounceInUp1 {
+  0%, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 1;
+    /* -webkit-transform: translate3d(0, 200rpx, 0); */
+    transform: translate3d(0,666rpx, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -30rpx, 0);
+    transform: translate3d(0, -30rpx, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10rpx, 0);
+    transform: translate3d(0, 10rpx, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5rpx, 0);
+    transform: translate3d(0, -5rpx, 0);
+  }
+
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.bounceInUp1 {
+  -webkit-animation-name: bounceInUp1;
+  animation-name: bounceInUp1;
+}
+.person {
+  width: 252rpx;
+  height: 666rpx;
+  left: 308rpx;
+  top: 0rpx;
+  /* opacity: 0; */
+  
+}
+.activep{
+  opacity: 1;
+  top: -448rpx;
+  animation: bounceInUp1 1.50s linear;
+}
+@keyframes book1move {
+  0% {
+    top: -452rpx;
+  }
+
+  50% {
+    top: -432rpx;
+  }
+
+  100% {
+    top: -452rpx;
+  }
+}
+
+.book1 {
+  width: 176rpx;
+  height: 181rpx;
+  z-index: 2;
+  left: 110rpx;
+  top: -452rpx;
+  animation: book1move 3.5s ease-in-out infinite;
+}
+
+@keyframes book2move {
+  0% {
+    top: -271rpx;
+  }
+
+  50% {
+    top: -241rpx;
+  }
+
+  100% {
+    top: -271rpx;
+  }
+}
+
+.book2 {
+  width: 195rpx;
+  height: 154rpx;
+  z-index: 2;
+  right: 11rpx;
+  top: -271rpx;
+  animation: book2move 3.5s linear infinite;
+}
+
+@keyframes book3move {
+  0% {
+    top: -135rpx;
+  }
+
+  50% {
+    top: -155rpx;
+  }
+
+  100% {
+    top: -135rpx;
+  }
+}
+
+.book3 {
+  width: 177rpx;
+  height: 187rpx;
+  z-index: 2;
+  left: 65rpx;
+  top: -135rpx;
+  animation: book3move 3.1s ease-in-out infinite;
+}
+
+@keyframes papermove {
+  0% {
+    top: -90rpx;
+  }
+
+  50% {
+    top: -80rpx;
+  }
+
+  100% {
+    top: -90rpx;
+  }
+}
+
+.paper {
+  width: 62rpx;
+  height: 88rpx;
+  z-index: 2;
+  right: 127rpx;
+  top: -90rpx;
+  animation: papermove 4s ease-in-out infinite;
+}
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.95, 0.95, 0.95);
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+.bt {
+  width: 711rpx;
+  height: 152rpx;
+  z-index: 2;
+  right: 20rpx;
+  bottom: 46rpx;
+  animation: pulse 1.5s linear infinite;
+}
+
+.down {
+  width: 35rpx;
+  height: 37rpx;
+  bottom: 19rpx;
+  z-index: 2;
+  right: 358rpx;
+}

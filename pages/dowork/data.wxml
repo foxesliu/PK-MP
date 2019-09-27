@@ -1,0 +1,96 @@
+<view class="top">
+  <image class="image" src="/public/images/wdata/wdata-top-bg.png"></image>
+  <view class="number-index pull-left mt-10" style="font-size:48rpx;">{{thisShowNum}}</view>
+  <view class="title pull-left" style="font-size: 64rpx;">{{thisShowType}}</view>
+  <view class="cup-container" wx:if="{{isAsk===false&&stat>2}}">
+    <bigcupComponent cup="{{info.score}}"></bigcupComponent>
+  </view>
+</view>
+
+<view style="height:100rpx;"></view>
+
+
+
+<view wx:if="{{isAsk===false&&stat<2}}">
+
+  <view wx:for="{{pageList}}" wx:key="{{index}}">
+    <view style="margin:20rpx;" wx:if="{{item.type==12}}">
+      <operationAnswerDrawComponent cannotDo="false" audioWorkingId="{{item.secCid}}" value="{{item.value}}" answerValue="{{item.answerValue}}"></operationAnswerDrawComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==0}}">
+      <operationQuestionTxtComponent txt="{{item.value}}"></operationQuestionTxtComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==1}}">
+      <operationQuestionPhotoComponent resourceUrl="{{item.value}}"></operationQuestionPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==2}}">
+      <operationQuestionAudioComponent resourceUrl="{{item.value}}" audioWorkingId="{{item.secCid}}"></operationQuestionAudioComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==3}}">
+      <operationQuestionVideoComponent audioWorkingId="{{item.secCid}}" resourceUrl="{{item.value}}"></operationQuestionVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==5}}">
+      <operationAnswerPhotoComponent resourceUrl="{{item.answerValue}}" audioWorkingId="{{item.secCid}}" binduploadcomplete="uploadImageCallback"></operationAnswerPhotoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==6}}">
+      <operationAnswerVideoComponent audioWorkingId="{{item.secCid}}" resourceUrl="{{item.answerValue}}" binduploadcomplete="uploadVideoCallback"></operationAnswerVideoComponent>
+    </view>
+    <view style="margin:20rpx;" wx:if="{{item.type==7}}">
+      <operationAnswerAudioComponent resourceUrl="{{item.answerValue}}" score100="{{item.score100}}" audioWorkingId="{{item.secCid}}" open="{{item.open}}" readtxt="{{item.value}}" bindrecordend="recordCallback">
+      </operationAnswerAudioComponent>
+    </view>
+  </view>
+
+  <modalLoadingComponent id="modalLoadingComponent" txt="录音上传中" kd="语音技术由科大讯飞支持"></modalLoadingComponent>
+  <view class="complete-btn" bindtap="completeBtn" hover-class="click-active">
+    <text>本页作答完毕</text>
+    <image src="/public/images/wdata/next-btn.png"></image>
+  </view>
+</view>
+
+<view wx:if="{{isAsk===false&&stat>1}}">
+  <view wx:if="{{isAsk===false&&stat>2}}">
+    <resultComponent rightOrWrong="{{rightOrWrong}}" bindchangeLabelShow="changeLabelShow"></resultComponent>
+  </view>
+
+  <view wx:for="{{pageList}}" wx:key="{{index}}">
+
+    <view class="mt-20">
+      <view class="lesson-page-question-container label">
+        <view class="left" wx:if="{{item.type==12}}">
+          <operationAnswerDrawComponent cannotDo="true" audioWorkingId="{{item.secCid}}" value="{{item.value}}" answerValue="{{item.answerValue}}"></operationAnswerDrawComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==2}}">
+          <operationQuestionAudioComponent resourceUrl="{{item.value}}" audioWorkingId="{{item.secCid}}"></operationQuestionAudioComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==5}}">
+          <operationAnswerPhotoComponent resourceUrl="{{item.answerValue}}" cannotDo="true"></operationAnswerPhotoComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==6}}">
+          <operationAnswerVideoComponent audioWorkingId="{{item.secCid}}" resourceUrl="{{item.answerValue}}" cannotDo="true"></operationAnswerVideoComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==7}}">
+          <operationAnswerAudioComponent open="{{item.open}}" cannotDo="true" resourceUrl="{{item.answerValue}}" score100="{{item.score100}}" audioWorkingId="{{item.secCid}}" readtxt="{{item.value}}" bindrecordend="recordCallback">
+          </operationAnswerAudioComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==3}}">
+          <operationQuestionVideoComponent resourceUrl="{{item.value}}"></operationQuestionVideoComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==0}}">
+          <operationQuestionTxtComponent txt="{{item.value}}"></operationQuestionTxtComponent>
+        </view>
+        <view class="left" wx:if="{{item.type==1}}">
+          <operationQuestionPhotoComponent resourceUrl="{{item.value}}"></operationQuestionPhotoComponent>
+        </view>
+        <view class="right" bindtap="gotoDetail" data-item="{{item}}">
+          <view wx:if="{{labelIsShow&&item.pzVoList.length&&item.pzVoList[0]['originator']}}">
+            <labelComponent it="{{item.pzVoList[0]}}"></labelComponent>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "committedComponent": "/components/small/committed",
+    "commitTxtComponent": "/components/commit/txt",
+    "operationAnswerTxtComponent": "/components/operation/answer/txt/txt"
+  }
+}

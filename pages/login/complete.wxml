@@ -1,0 +1,21 @@
+<view class='main-container'>
+  
+  <view class='container'>
+    <view class='title-box'>
+      <image class='top-img' src="/public/images/login/complete.png"></image>
+    </view>
+    <view class='text-box'>
+    课程顾问会在24小时内<text style='color:#ff6866'>（工作时间内）与您取得联系，请留意电话。</text>
+    </view>
+  </view>
+  
+  <view class='next-box'>
+      <button class='next' bindtap='complete'>完成</button>
+  </view>
+  <view class='bottom-box'>
+    <image class='img' src='/public/images/lesson/bottom-bg.png'></image>
+  </view>
+</view>
+<!-- <button size="mini" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">确定要登录吗？</button>
+
+<view style="word-break:break-all;">{{dat}}</view> -->

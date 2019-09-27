@@ -1,0 +1,33 @@
+page {
+  background: white;
+}
+
+.development-image {
+  width: 435rpx;
+  height: 566rpx;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.development-image image {
+  width: 435rpx;
+  height: 466rpx;
+}
+
+.development-image .txt {
+  font-size: 37rpx;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15rpx;
+}
+
+.logo-image {
+  width: 209rpx;
+  height: 40rpx;
+  position: fixed;
+  bottom: 55rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

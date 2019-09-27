@@ -1,0 +1,44 @@
+<view wx:if="{{stat>2&&labelShow11}}">
+  <drawLabelComponent secId="{{options.secId}}" from="{{from}}" labelList="{{labelList}}" labelShow="{{labelShow}}"></drawLabelComponent>
+  {{options.secId}}
+</view>
+
+<view wx:if="{{stat>2}}">
+  <resultComponent rightOrWrong="{{rightOrWrong}}" bindchangeLabelShow="changeLabelShow"></resultComponent>
+</view>
+
+<view style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;" class="canvas-image temp-image" wx:if="{{tempImageSrc}}">
+  <image style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;" src="{{tempImageSrc}}"></image>
+</view>
+
+<view style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;" class="canvas-image">
+  <image style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;" src="{{imageSrc}}"></image>
+</view>
+
+<view class="footer">
+  <view class="btn cancel" bindtap="cancel">
+    <view class="pkicon pkicon-wdraw-cancel"></view>
+  </view>
+  <view class="mbtn audio-btn" wx:if="{{footerhasAudio}}" bindtap="showAudioBox" style="right:{{!footerAudioIsHigh?'-63rpx':0}}rpx;margin-left:-160rpx">
+    <view class="white-bg red-bg pull-left">
+      <view wx:if="{{!footerAudioIsHigh}}" class="audio-play-btn pkicon pkicon-wdata-icon-right">
+        <view class="path1"></view>
+      </view>
+      <view wx:if="{{footerAudioIsHigh}}" class="audio-play-btn pkicon pkicon-wdraw-pause">
+      </view>
+    </view>
+    <view class="second pull-left" wx:if="{{footerAudioIsHigh&&audioShowSecond}}">
+      <!-- <view class="pkicon pkicon-wdata-sound pull-left"></view> -->
+      <text class="pull-left">{{audioShowSecond}}''</text>
+    </view>
+  </view>
+  <view class="mbtn" bindtap="showPenBox" style="right:{{footerIsHigh?'350rpx':0}}">
+    <view class="white-bg">
+      <image src="{{drawOrEraser?'/public/images/wdraw/draw-choose1.png':'/public/images/wdraw/draw-choose2.png'}}"></image>
+    </view>
+  </view>
+  <!-- <view class="quit" bindtap="quit">退出</view> -->
+  <view class="btn submit" bindtap="upload">
+    <view class="pkicon pkicon-wdraw-right"></view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<!-- <button bindtap="gotoUrl">gotoUrl</button> -->
+
+<view wx:if="{{!isIPad}}">
+  <view class="top">预习与作业</view>
+  <view class="tower-swiper" bindtouchmove="towerMove" bindtouchstart="towerStart" bindtouchend="towerEnd">
+    <view wx:if="{{towerList.length}}" class="tower-item {{item.zIndex==0?'none':''}}" wx:for="{{towerList}}" wx:key="{{index}}" style="margin-left:{{item.mLeft}}rpx;transform:scale({{item.zIndex==2?1:0.7}});z-index:{{item.zIndex}}">
+      <view wx:if="{{!isComplete}}" class="bg-img shadow-blur" bindtap="gotoCourse" data-id="{{item.refId}}" data-name="{{item.value11.courseName}}">
+        <text class="text1 t-hidden">{{item.name1}}</text>
+        <text class="text1 text2">{{item.name2}}</text>
+        <text class="btn font32">开始答题</text>
+        <image class="bg-image" src="/public/images/home/home-swiper-bg.png"></image>
+      </view>
+
+      <view wx:if="{{isComplete}}" class="bg-img shadow-blur" bindtap="gotoCourse" data-id="{{item.refId}}" data-name="{{item.value11.courseName}}">
+        <text class="text1 t-hidden">{{item.name1}}</text>
+        <text class="text1 text2">{{item.name2}}</text>
+        <text class="btn">查看作答</text>
+        <image class="bg-image" src="/public/images/home/home-swiper-bg.png"></image>
+        <image class="complete-image" src="/public/images/home/home-swiper-over.png"></image>
+      </view>
+    </view>
+
+    <view class="no-data" wx:if="{{towerList.length==0}}">
+      <image src="/public/images/home/home-no-data.png"></image>
+    </view>
+  </view>
+
+  <footerComponent active="0" complete="{{isComplete}}"></footerComponent>
+</view>
+<view wx:if="{{isIPad}}" class='ipad-container'>
+  <view class="top">预习与作业</view>
+  <view class="tower-swiper" bindtouchmove="towerMove" bindtouchstart="towerStart" bindtouchend="towerEnd">
+    <view wx:if="{{towerList.length}}" class="tower-item {{item.zIndex==0?'none':''}}" wx:for="{{towerList}}" wx:key="{{index}}" style="margin-left:{{item.mLeft}}rpx;transform:scale({{item.zIndex==2?1:0.7}});z-index:{{item.zIndex}}">
+      <view wx:if="{{!isComplete}}" class="bg-img shadow-blur" bindtap="gotoCourse" data-id="{{item.refId}}" data-name="{{item.value11.courseName}}">
+        <text class="text1 t-hidden">{{item.name1}}</text>
+        <text class="text1 text2">{{item.name2}}</text>
+        <text class="btn font32">开始答题</text>
+        <image class="bg-image" src="/public/images/home/home-swiper-bg.png"></image>
+      </view>
+
+      <view wx:if="{{isComplete}}" class="bg-img shadow-blur" bindtap="gotoCourse" data-id="{{item.refId}}" data-name="{{item.value11.courseName}}">
+        <text class="text1 t-hidden">{{item.name1}}</text>
+        <text class="text1 text2">{{item.name2}}</text>
+        <text class="btn font32">查看作答</text>
+        <image class="bg-image" src="/public/images/home/home-swiper-bg.png"></image>
+        <image class="complete-image" src="/public/images/home/home-swiper-over.png"></image>
+      </view>
+    </view>
+
+    <view class="no-data" wx:if="{{towerList.length==0}}">
+      <image src="/public/images/home/home-no-data.png"></image>
+    </view>
+  </view>
+  <footerComponent active="0" complete="{{isComplete}}"></footerComponent>
+</view>

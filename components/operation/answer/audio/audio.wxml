@@ -1,0 +1,78 @@
+<wxs module="filter" src="../../../../public/js/filter.wxs"></wxs>
+
+<view class="audio-container">
+  <view class="box">
+    <view class="left">
+      <view class="pkicon pkicon-wdata-w-ask" wx:if="{{!replyIcon}}"></view>
+      <view class="pkicon pkicon-ask-reply" style="font-size:55rpx" wx:if="{{replyIcon}}"></view>
+    </view>
+
+    <view class="middle" wx:if="{{step==1}}">
+      <text class="text ml-10">请上传录音</text>
+    </view>
+    <view class="middle" wx:if="{{step==2}}">
+      <text class="text ml-10">{{timerFormat}}</text>
+      <view class="record-gif">
+        <recordingAnimationComponent></recordingAnimationComponent>
+      </view>
+    </view>
+    <view class="middle" wx:if="{{step==3}}">
+      <view class="pull-left score" wx:if="{{!scoreHidden&&open}}">
+        <image src="{{'/public/images/score/'+filter.scoreToLetter(score)+'.png'}}"></image>
+        <!-- <text class="font52">{{score}}</text>
+        <text class="font22 ml-5">分</text> -->
+      </view>
+      <view class="mt-5 pull-left" hidden="{{url&&open}}">
+        <view class="pull-left pkicon pkicon-wdata-sound ml-10"></view>
+        <view class="pull-left second ml-5" wx:if="{{!duration}}">{{durationShow}}</view>
+        <view class="pull-left second ml-5" wx:if="{{duration}}">{{durationShow}}''</view>
+      </view>
+      <view class="pull-right record-again" wx:if="{{!isCommit&&!cannotDo}}" bindtap="clickRecordAgain">
+        <text class="pkicon pkicon-wdraw-cancel"></text>
+        <text class="color-white font26 ml-10">重新录音</text>
+      </view>
+    </view>
+    <view class="middle step4" wx:if="{{step==4}}">
+      <view class="mt-5 pull-left view">
+        <view class="pull-left pkicon pkicon-wdata-sound ml-10"></view>
+        <view class="pull-left second ml-10">{{playingShowSecond}}''</view>
+      </view>
+      <view class="progress" style="left:-{{playingLeft}}%"></view>
+    </view>
+
+    <view class="right" bindtap="record">
+      <view class="right-box" hover-class="click-active" wx:if="{{step==1}}">
+        <view class="pkicon pkicon-wdata-record">
+          <text class="path1"></text>
+        </view>
+      </view>
+      <view class="right-box-recording" wx:if="{{step==2}}">
+        <view></view>
+      </view>
+      <view class="right-box" wx:if="{{step==3}}">
+        <view class="pkicon pkicon-wdata-icon-right">
+          <text class="path1"></text>
+        </view>
+      </view>
+      <view class="right-box" wx:if="{{step==4}}">
+        <view class="pkicon pkicon-wdraw-pause">
+          <text class="path1"></text>
+        </view>
+      </view>
+    </view>
+    <view class="bg">
+      <image src="/public/images/ask/bg.png"></image>
+    </view>
+  </view>
+
+  <view class="shape" wx:if="{{readtxt&&open}}">
+    <view class="t">
+      <text>请跟读以下内容</text>
+      <view class="pkicon pkicon-wdata-right-arrow"></view>
+    </view>
+    <text class="c">{{readtxt}}</text>
+  </view>
+</view>
+
+<modalRedoComponent id="modalRedoComponent"></modalRedoComponent>
+<modalLoadingComponent id="modalLoadingComponent" txt="语音上传中" kd="语音技术由科大讯飞支持"></modalLoadingComponent>

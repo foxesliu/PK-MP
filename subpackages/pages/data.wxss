@@ -1,0 +1,18 @@
+@import './draw.wxss';
+
+.lesson-page-question-container {
+  display: flex;
+  width: 100%;
+}
+
+.lesson-page-question-container .left {
+  flex: 1;
+  margin-left: 14rpx;
+}
+
+.lesson-page-question-container .right {
+  width: 110rpx;
+  margin-left: 20rpx;
+}
+
+

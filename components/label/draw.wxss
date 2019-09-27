@@ -1,0 +1,13 @@
+.label-container {
+  width: 100%;
+  height: 1080rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.label-container .item {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}

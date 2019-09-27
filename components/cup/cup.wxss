@@ -1,0 +1,7 @@
+.cup {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 5rpx;
+  margin-top: 5rpx;
+}
+

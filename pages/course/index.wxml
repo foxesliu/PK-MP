@@ -1,0 +1,85 @@
+<wxs module="filter" src="../../public/js/filter.wxs"></wxs>
+
+<view class="video-container" wx:if="{{videoIsPlaying}}">
+  <video src="{{videoUrl}}" id="video" controls objectFit="cover" bindfullscreenchange="bindfullscreenchange" show-center-play-btn="true" danmu-btn page-gesture="true" enable-progress-gesture="true"></video>
+  <button bindtap="closeVideo" wx:if="{{isPad}}">返回上一页</button>
+</view>
+
+<view class="fixed-top">
+  <view class="header">
+    <image src="/public/images/course/course-top-bg.png"></image>
+  </view>
+
+  <view class="title t-hidden">{{courseName}}</view>
+
+  <view class="tab">
+    <view bindtap="clickTab" data-index="0" class="{{tabActive==0?'active':''}}">
+      <text class="text">待上课程</text>
+      <view class="span" wx:if="{{length1}}">{{length1}}</view>
+    </view>
+    <view bindtap="clickTab" data-index="1" class="{{tabActive==1?'active':''}}">
+      <text class="text">已上课程</text>
+      <view class="span" wx:if="{{length2}}">{{length2}}</view>
+    </view>
+    <view bindtap="clickTab" data-index="2" class="{{tabActive==2?'active':''}}">
+      <text class="text">额外布置课程</text>
+      <view class="span" wx:if="{{length3}}">{{length3}}</view>
+    </view>
+  </view>
+</view>
+
+<view style="height:175rpx;"></view>
+
+<view class="list mb-20" wx:if="{{tabActive!=2}}">
+  <view wx:if="{{list.length==0}}">
+    <nodataComponent image="/public/images/ask/pizhu-all.png" txt="暂时没有相关课程哦"></nodataComponent>
+  </view>
+
+  <view class="item" wx:if="{{list.length>0}}" wx:for="{{list}}" wx:key="index">
+    <view class="top">
+      <view class="t-hidden" style="width:50%;font-size:48rpx;">{{item.lessonName}}</view>
+      <view>
+        <view class="pull-left">{{item.lessonTime}}</view>
+        <view class="view-video pull-left" bindtap="gotoLive" data-liveaddr="{{item.eeoVodUrlCollection}}">
+          <image src="{{item.eeoVodUrlCollection?'/public/images/wdata/video-active.png':'/public/images/wdata/video.png'}}"></image>
+          <view class="text">课程回放</view>
+        </view>
+      </view>
+    </view>
+    <view class="con">
+      <view class="view" bindtap="gotoLesson" data-prlid="{{item.ruserLessonContent[0]['prlId']}}" data-mode="{{item.ruserLessonContent[0]['mode']}}" data-stat="{{item.ruserLessonContent[0]['stat']}}" data-isextra="0" data-data="{{item}}">
+        <view class="image">
+          <courseComponent mode="{{item.ruserLessonContent[0]['mode']}}" stat="{{item.ruserLessonContent[0]['stat']}}"></courseComponent>
+          <text class="span" wx:if="{{item.ruserLessonContent[0]['thisLessonMessageCount']}}">{{item.ruserLessonContent[0]['thisLessonMessageCount']}}</text>
+        </view>
+        <text class="text mt-20 pkicon pkicon-course-yuxi"></text>
+      </view>
+      <view class="view" bindtap="gotoLesson" data-prlid="{{item.ruserLessonContent[1]['prlId']}}" data-mode="{{item.ruserLessonContent[1]['mode']}}" data-stat="{{item.ruserLessonContent[1]['stat']}}" data-isextra="0" data-data="{{item}}">
+        <view class="image">
+          <courseComponent mode="{{item.ruserLessonContent[1]['mode']}}" stat="{{item.ruserLessonContent[1]['stat']}}"></courseComponent>
+          <text class="span" wx:if="{{item.ruserLessonContent[1]['thisLessonMessageCount']}}">{{item.ruserLessonContent[1]['thisLessonMessageCount']}}</text>
+        </view>
+        <text class="text mt-20 pkicon pkicon-course-zuoyi"></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="other-list mb-20" wx:if="{{tabActive==2}}">
+  <view wx:if="{{list3.length==0}}">
+    <nodataComponent image="/public/images/ask/pizhu-all.png" txt="暂时没有额外布置课程哦"></nodataComponent>
+  </view>
+  <view wx:if="{{list3.length>0}}" bindtap="gotoLesson" data-isextra="1" data-prlid="{{item['prlId']}}" data-data="{{item}}" wx:for="{{list3}}" wx:key="{{index}}">
+    <view class="item {{item.mode=='0'?'pre':'task'}}">
+      <view class="left">
+        <courseComponent mode="{{item.mode}}" stat="{{item.stat}}"></courseComponent>
+        <text class="span" wx:if="{{item.thisExtraLessonCount}}">{{item.thisExtraLessonCount}}</text>
+      </view>
+      <view class="right">
+        <view class="status mt-10">{{item.mode==0?'预习':'作业'}}</view>
+        <view class="name font48 mt-10 t-hidden" style="width:60%">{{item.lessonName}}</view>
+        <view class="text color444 mt-5 font24">布置时间：{{filter.formatDate(item.extraTime)}}</view>
+      </view>
+    </view>
+  </view>
+</view>

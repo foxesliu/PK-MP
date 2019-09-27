@@ -1,0 +1,35 @@
+<view class="box" wx:if="{{!url}}">
+  <view class="left">
+    <view class="pkicon pkicon-ask-reply" style="font-size:55rpx"></view>
+  </view>
+  <view class="middle">
+    <text class="pkicon pkicon2 pkicon-wdata-video ml-10">
+      <text class="path1"></text>
+    </text>
+    <text class="video-txt">请上传视频</text>
+  </view>
+  <view class="right">
+    <view class="right-box" bindtap="upload">
+      <view class="pkicon2 pkicon2-wdata-upload">
+        <text class="path1"></text>
+      </view>
+    </view>
+  </view>
+  <view class="bg">
+    <image src="/public/images/ask/bg.png"></image>
+  </view>
+</view>
+
+<view class="video-box answer-component-video" wx:if="{{url}}">
+  <view class="left">
+    <view class="pkicon pkicon-ask-reply" style="font-size:55rpx"></view>
+  </view>
+  <view class="mid">
+    <image wx:if="{{!isPlaying}}" bindtap="playVideo" src="/public/images/wdata/video-default.jpg"></image>
+    <video wx:if="{{isPlaying}}" poster="{{videoPoster}}" id="video{{vid}}" src="{{url}}" autoplay="true" controls objectFit="cover" show-center-play-btn="true" danmu-btn page-gesture="true" enable-progress-gesture="true"></video>
+    <view class="pull-right record-again" wx:if="{{!resourceUrl}}" bindtap="clickUploadAgain">
+      <text class="pkicon pkicon-wdraw-cancel"></text>
+      <text class="color-white font26 ml-10">重新上传</text>
+    </view>
+  </view>
+</view>

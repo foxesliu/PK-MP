@@ -1,0 +1,88 @@
+<wxs module="filter" src="../../public/js/filter.wxs"></wxs>
+<view class="myquestion-top">
+  <view class="left">
+    <text class="t1">批注{{info.index}}</text>
+    <text class="t2">页面{{info.pageNum}}</text>
+  </view>
+  <view class="right" bindtap="toggle">
+    <image class="right-image" src="/public/images/ask/ask-ask.png"></image>
+    <!-- <text class="t3 pkicon pkicon-login-phone font48"></text> -->
+    <text class="t4 font36">{{replyBoxIsShow?'隐藏回复':'回复老师'}}</text>
+  </view>
+</view>
+<view class="myquestion-modal-box" wx:if="{{replyBoxIsShow}}">
+  <view class="box">
+    <view class="top font28 color-white">选择一种方式回复</view>
+    <view class="bottom">
+      <view bindtap="gotoVideo">拍视频</view>
+      <view bindtap="gotoPhoto">拍照片</view>
+      <view bindtap="gotoDraw">画张图</view>
+      <view bindtap="gotoAudio">留语音</view>
+      <view bindtap="gotoTxt">留文字</view>
+    </view>
+  </view>
+</view>
+
+<view wx:for="{{allList}}" wx:key="{{index}}">
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==1&&item.filesType==10}}">
+    <replyTeacherAudioComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyTeacherAudioComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==1&&item.filesType==9}}">
+    <replyTeacherPhotoComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyTeacherPhotoComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==1&&item.filesType==8}}">
+    <replyTeacherTxtComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" txt="{{item.value}}"></replyTeacherTxtComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==1&&item.filesType==11}}">
+    <replyTeacherVideoComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyTeacherVideoComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==0&&item.filesType==9}}">
+    <replyStudentPhotoComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyStudentPhotoComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==0&&item.filesType==11}}">
+    <replyStudentVideoComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" url="{{item.value}}"></replyStudentVideoComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==0&&item.filesType==10}}">
+    <replyStudentAudioComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" index="44" url="{{item.value}}"></replyStudentAudioComponent>
+  </view>
+
+  <view style="margin:30rpx 20rpx;" wx:if="{{item.sourceType==0&&item.filesType==8}}">
+    <replyStudentTxtComponent date="{{item.datatime}}" avatarUrl="{{filter.getSourceJsonAvatarUrl(item)}}" nickName="{{filter.getSourceJsonNickname(item)}}" txt="{{item.value}}"></replyStudentTxtComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==2}}">
+    <operationQuestionAudioComponent resourceUrl="{{item.value}}" audioWorkingId="ttt{{index}}"></operationQuestionAudioComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==1}}">
+    <operationQuestionPhotoComponent resourceUrl="{{item.value}}"></operationQuestionPhotoComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==0}}">
+    <operationQuestionTxtComponent txt="{{item.value}}"></operationQuestionTxtComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==3}}">
+    <operationQuestionVideoComponent resourceUrl="{{item.value}}"></operationQuestionVideoComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==7}}">
+    <operationAnswerAudioComponent resourceUrl="{{item.value}}" cannotDo="true" audioWorkingId="{{'aa'+index}}">
+    </operationAnswerAudioComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==5}}">
+    <operationAnswerPhotoComponent cannotDo="true" resourceUrl="{{item.value}}"></operationAnswerPhotoComponent>
+  </view>
+
+  <view style="margin:20rpx;" wx:if="{{item.filesType==6}}">
+    <operationAnswerVideoComponent cannotDo="true" resourceUrl="{{item.value}}"></operationAnswerVideoComponent>
+  </view>
+
+</view>

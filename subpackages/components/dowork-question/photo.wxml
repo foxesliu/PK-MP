@@ -1,0 +1,8 @@
+<view class="box">
+  <view class="left">
+    <view class="pkicon pkicon-wdata-w-question" style="font-size:40rpx;"></view>
+  </view>
+  <view class="mid">
+    <image bindtap="showPic" data-src="{{resourceUrl}}" mode="widthFix" src="{{resourceUrl}}"></image>
+  </view>
+</view>

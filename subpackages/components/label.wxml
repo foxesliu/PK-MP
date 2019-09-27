@@ -1,0 +1,7 @@
+<view class="label-box">
+  <image class="label-image" src="{{a}}"></image>
+  <view class="bot">
+    <text class="circle"></text>
+    <text class="txt">批注</text>
+  </view>
+</view>

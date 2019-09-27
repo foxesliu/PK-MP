@@ -1,0 +1,64 @@
+<view class='flex-box container-box'>
+  <view class='bg-box'>
+    <image src='/public/images/share/topbg.png'></image>
+    <image src='/public/images/share/bottombg.png'></image>
+  </view>
+  <view class='main-content-box-bg'>
+    <view class='main-content-box'>
+      <view class='outside-box'>
+        <view class='content-top-box flex-box'>
+          <view class='bg-img'>
+            <image src='/public/images/share/yellow-bg.png'></image>
+          </view>
+          <view class='content-inside'>
+            <view class='item top'>
+              <image src="{{ruserPic}}"></image>
+              <view class='stuName'>{{ruserName}}</view>
+            </view>
+            <view class='icon-cup-box flex-box'>
+              <image src="/public/images/lesson/cup-active.png"></image>
+              <image src="/public/images/lesson/cup-active.png"></image>
+              <image src="/public/images/lesson/cup-active.png"></image>
+              <image src="/public/images/lesson/cup-active.png"></image>
+              <image src="/public/images/lesson/cup-active.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class='content-bottom-box'>
+          <view class='txt'>
+            <view>
+              用时
+              <text>{{des.hour}}</text> 小时
+              <text>{{des.min}}</text> 分钟
+              <text>{{des.second}}</text> 秒完成作答
+            </view>
+            <view>正确率
+              <text>{{des.percent}}</text> 本节一共获得了
+              <text>{{des.trophies}} 个奖杯</text> </view>
+          </view>
+          <view class='flex-box zan-box'>
+            <view class='hdimage-box flex-box'>
+              <image wx:for="{{userAvatarUrls}}" wx:key="index" src="{{item}}"></image>
+              <text class='font-bold person-number' wx:if="{{likedNum>4}}">···</text>
+              <text class='person-number'>{{likedNum}}人点过赞</text>
+            </view>
+            <view class='btn-zan-box'>
+              <view class='btn-zan flex-box' wx:if="{{!isLiked}}">
+                <view>给孩子的努力点个赞吧!</view>
+                <button class='like-btn flex-box' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+                  <text class="pkicon pkicon-share-dianzan-top"></text>
+                </button>
+              </view>
+
+              <view class='btn-zaned' wx:if="{{isLiked}}">已经赞过啦
+                <text class="pkicon pkicon-share-dianzan-top icon-zan"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <button class='btn-result' bindtap='gotoResult'>查看孩子的学习成果</button>
+    </view>
+  </view>
+
+</view>

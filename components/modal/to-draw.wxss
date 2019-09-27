@@ -1,0 +1,8 @@
+@import "./giveup.wxss";
+
+.imi {
+  width: 90rpx;
+  height: 90rpx;
+  top: 2rpx;
+  border-radius: 50%;
+}

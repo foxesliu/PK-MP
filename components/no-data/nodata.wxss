@@ -1,0 +1,20 @@
+.development-image {
+  width: 435rpx;
+  height: 566rpx;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.development-image image {
+  width: 431rpx;
+  height: 537rpx;
+}
+
+.development-image .txt {
+  font-size: 36rpx;
+  text-align: center;
+  color: #666;
+  margin-top: 42rpx;
+}
